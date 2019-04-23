@@ -1,0 +1,671 @@
+@charset "utf-8";
+
+
+/*
+http://dshrd.org
+*/
+
+* {margin:0; padding:0; box-sizing:border-box}
+html{min-width:320px}
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, address, em, img, strong,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td{margin: 0; padding:0; border:0; background:transparent}
+
+body{font-family:'notoKR'; font-weight:normal; font-size:1em}
+
+/* 전체 영역에서 641 사이즈까지만 적용됨 */
+@media screen and (min-width:641px) {
+	
+	/* 웹에서만 줄바꿈*/
+	.w-br {display:block !important}
+}
+
+@media screen and (max-width:1366px) {
+	body{font-size:0.9em}
+}
+
+@media screen and (max-width:768px) {
+	body{font-size:0.8em}
+	input[type=submit], input[type=text] {-webkit-appearance:none; -moz-appearance:none; appearance:none; border-radius:0px;} /* ios 인풋 박스 라운드 제거 */
+	a[href^="tel"]{color:inherit; text-decoration:none} /* ios a 태그 색깔 변경 */
+	
+}
+
+@media screen and (max-width:640px) {
+	.m-br {display:block} /* 모바일에서만 br */
+}
+
+table{border-spacing:0; border-collapse:collapse}
+
+address, em{font-style:normal}
+ol, ul{list-style:none}
+
+fieldset{/*display:inline; */border:none}
+input{font-family:Dotum,AppleGothic,sans-serif}
+input, textarea, select{vertical-align:middle; font-family:inherit; font-size:1em; line-height:1.2em; letter-spacing:-1px}
+textarea{color:#6d6767}
+
+.snav-area button { border: 0; background: none; cursor: pointer; }
+
+hr, caption{position:absolute; width:0; height:0; font-size:0; line-height:0; text-indent:-9999px; overflow:hidden; visibility:hidden}
+
+/* Skip To Content */
+#skipNav {position:absolute; left:0; top:-1000px; width:100%; height: 0px; z-index:1000; line-height:0px; font-size:0px}
+#skipNav a {display:block; text-align:center; width: 100%; line-height:0px;	font-size:0px}
+#skipNav a:focus, #skipNav a:hover, #skipNav a:active {position:absolute; left:0px; top:1000px; padding: 8px 0; display:block; height:30px; background:#20262c; font-size:12px; font-weight:bold; line-height:18px; color:#fff}
+
+/* link */
+a{color:#6d6767;text-decoration:none}
+a:visited {text-decoration:none}
+a:hover{text-decoration:none; color:#6d6767}
+
+/*폰트적용*/
+
+@font-face {
+ font-family:'notoKR';
+ font-weight: normal;
+ src: url('/html/kor/font/NotoSansCJKkr-Regular.eot');
+ src: url('/html/kor/font/NotoSansCJKkr-Regular.eot') format('embedded-opentype'),
+ url('/html/kor/font/NotoSansCJKkr-Regular.woff') format('woff'),
+ url('/html/kor/font/NotoSansCJKkr-Regular.otf') format('truetype');
+}
+
+@font-face {
+ font-family:'notoKR';
+ font-weight: 200;
+ src: url('/html/kor/font/NotoSansCJKkr-Light.eot');
+ src: url('/html/kor/font/NotoSansCJKkr-Light.eot') format('embedded-opentype'),
+ url('/html/kor/font/NotoSansCJKkr-Light.woff') format('woff'),
+ url('/html/kor/font/NotoSansCJKkr-Light.otf') format('truetype');
+}
+
+@font-face {
+ font-family:'notoKR';
+ font-weight: 300;
+ src: url('/html/kor/font/NotoSansCJKkr-DemiLight.eot');
+ src: url('/html/kor/font/NotoSansCJKkr-DemiLight.eot') format('embedded-opentype'),
+ url('/html/kor/font/NotoSansCJKkr-DemiLight.woff') format('woff'),
+ url('/html/kor/font/NotoSansCJKkr-DemiLight.otf') format('truetype');
+}
+
+
+@font-face {
+ font-family:'notoKR';
+ font-weight: 500;
+ src: url('/html/kor/font/NotoSansCJKkr-Medium.eot');
+ src: url('/html/kor/font/NotoSansCJKkr-Medium.eot') format('embedded-opentype'),
+ url('/html/kor/font/NotoSansCJKkr-Medium.woff') format('woff'),
+ url('/html/kor/font/NotoSansCJKkr-Medium.otf') format('truetype');
+}
+
+@font-face {
+ font-family:'notoKR';
+ font-weight: 700;
+ src: url('/html/kor/font/NotoSansCJKkr-Bold.eot');
+ src: url('/html/kor/font/NotoSansCJKkr-Bold.eot') format('embedded-opentype'),
+ url('/html/kor/font/NotoSansCJKkr-Bold.woff') format('woff'),
+ url('/html/kor/font/NotoSansCJKkr-Bold.otf') format('truetype');
+}
+
+/*KBIZ - 고딕*/
+@font-face {
+	font-family:'KBIZgd';
+	font-weight:normal;
+	src: url('/html/kor/font/KBIZgdM.eot');
+	src: url('/html/kor/font/KBIZgdM.eot?#iefix') format('embedded-opentype'),
+		 url('/html/kor/font/KBIZgdM.woff') format('woff');
+}
+
+
+@font-face {
+	font-family:'KBIZgd';
+	font-weight:100;
+	src: url('/html/kor/font/KBIZgdL.eot');
+	src: url('/html/kor/font/KBIZgdL.eot?#iefix') format('embedded-opentype'),
+		 url('/html/kor/font/KBIZgdL.woff') format('woff');
+}
+
+@font-face {
+	font-family:'KBIZgd';
+	font-weight:300;
+	src: url('/html/kor/font/KBIZgdH.eot');
+	src: url('/html/kor/font/KBIZgdH.eot?#iefix') format('embedded-opentype'),
+		 url('/html/kor/font/KBIZgdH.woff') format('woff');
+}
+
+@font-face {
+	font-family:'KBIZgd';
+	font-weight: 500;
+	src: url('/html/kor/font/KBIZgdB.eot');
+	src: url('/html/kor/font/KBIZgdB.eot?#iefix') format('embedded-opentype'),
+		 url('/html/kor/font/KBIZgdB.woff') format('woff');
+}
+
+
+
+/*KBIZ - 명조*/
+
+@font-face {
+	font-family:'KBIZmz';
+	font-weight: normal;
+	src: url('/html/kor/font/KBIZmzH.eot');
+	src: url('/html/kor/font/KBIZmzH.eot?#iefix') format('embedded-opentype'),
+		 url('/html/kor/font/KBIZmzH.woff') format('woff');
+}
+
+@font-face {
+	font-family:'KBIZmz';
+	font-weight: 100;
+	src: url('/html/kor/font/KBIZmzL.eot');
+	src: url('/html/kor/font/KBIZmzL.eot?#iefix') format('embedded-opentype'),
+		 url('/html/kor/font/KBIZmzL.woff') format('woff');
+}
+
+
+@font-face {
+	font-family:'KBIZmz';
+	font-weight: 300;
+	src: url('/html/kor/font/KBIZmzM.eot');
+	src: url('/html/kor/font/KBIZmzM.eot?#iefix') format('embedded-opentype'),
+		 url('/html/kor/font/KBIZmzM.woff') format('woff');
+}
+
+@font-face {
+	font-family:'KBIZmz';
+	font-weight: 500;
+	src: url('/html/kor/font/KBIZmzB.eot');
+	src: url('/html/kor/font/KBIZmzB.eot?#iefix') format('embedded-opentype'),
+		 url('/html/kor/font/KBIZmzB.woff') format('woff');
+}
+
+
+
+#header i {font-style:normal; position:relative; display:inline-block}
+#header i:before, #header i:after {content:''; font-family:'NotoKr'; position:absolute}
+	.arrow-r{width:16px; height:16px}
+	.arrow-r:before {border-top:1px solid #999; border-right:1px solid #999; width:4px; height:4px; transform:rotate(45deg); right:6px; top:7px}
+	.arrow-r:after {border:1px solid #999; border-radius:100px; width:100%; height:100%; top:1px}
+
+	.arrow-b{width:16px; height:16px}
+	.arrow-b:before {border-top:1px solid #999; border-right:1px solid #999; width:4px; height:4px; transform:rotate(135deg); top:7px; right:6px; transition:all .3s}
+	.arrow-b:after {border:1px solid #999; border-radius:100px; width:100%; height:100%; right:0; top:2px}
+	.plus:before  {background:#999; width:1px; height:15px; top:50%; left:50%; margin-top:-5px}
+	.plus:after {background:#999; width:15px; height:1px; top:50%; left:50%;  margin-top:2px; margin-left:-7px}
+
+/* text hidden */
+.IR {font: 0px/0 Arial;  height: 0; left: -9999px !important; position: absolute !important; top: -9999px !important; visibility:hidden}
+.blind{position:absolute; top:-1000px; left:-1000px; width:0; height:0; font-size:0; line-height:0; visibility:hidden}
+
+/* img alpha */
+.alpha {opacity:.6;filter:alpha(opacity=60)}
+
+/* dotline */
+.dashed {border-top:1px dashed #CCC}
+.dotline {border-top:1px dotted #CCC}
+.solid {border-top:1px solid #CCC}
+
+/* 새창 */
+a.open-popup {position:relative; padding:0 17px 0 0; background:url('/a1/img/common/iconOpen.gif') no-repeat  75px -32px}
+
+/*들여쓰기*/
+.indent {margin:0 0 40px 20px; clear:both; overflow:hidden; color:#666}
+
+/* display style */
+.diB {display:block}
+.diIn {display:inline}
+.diInB {display:inline-block}
+.diNone {display:none}
+.Tcell {display:table-cell}
+
+/*heading*****************************************************************************************************************************************************************************************************************************/
+
+/*width box*/
+.Row {clear:both; content:""; margin:15px 0 0; overflow:hidden}
+.area {box-sizing:border-box; margin-top:20px}
+
+
+/*depth*******************************************************************************************************************************************************************************************************************************/
+
+/*line tpye*/
+ul.Inline li, ol.Inline li, dl.Inline dt, dl.Inline dd {float:left; padding-right:20px}
+dl.Inline dt {font-weight:bold}
+ 
+/*style-type*/
+ul.Type-dec, ol.Type-dec{list-style-type: decimal; padding-left:20px}
+ul.Type-zero, ol.Type-roman{list-style-type: upper-roman; padding-left:20px}
+ul.Type-alpha, ol.Type-alpha{list-style-type: upper-alpha; padding-left:20px}
+ul.Type-circle, ol.Type-circle{list-style-type: circle; padding-left:10px}
+
+/*Borderline*************************************************************************************************************************************************************************************************************************/
+
+.Bt {border-top:0 !important}
+.Bl {border-left:0 !important}
+.Br {border-right:0 !important}
+.Bb {border-bottom:0 !important}
+
+/*Box*************************************************************************************************************************************************************************************************************************/
+
+.Box {background:#fff; border:1px solid #dfdddd}
+
+/*Box color*/
+.Box-Blue {background:#d9edf7; border:1px solid #bce8f1; color:#31708f}
+.Box-Cyan {background:#c2eae4; border:1px solid #a0d5cd; color:#0c8a78}
+.Box-Gray {background:#fafafa; border:1px solid #e6e6e6; color:#666}
+.Box-Green {background:#dff0d8; border:1px solid #d6e9c6; color:#3c763d}
+.Box-Red {background:#f2dede; border:1px solid #ebccd1; color:#a94442}
+.Box-Yellow {background:#fcf8e3; border:1px solid #faebcc; color:#8a6d3b}
+
+.Box, .Box-Blue, .Box-Cyan, .Box-Gray, .Box-Green, .Box-Red, .Box-Yellow  {padding:10px 15px 10px; border-radius:4px; box-sizing:border-box}
+
+		
+/*Box size********************************************************************************************************************************************************************************************************************/
+
+.W100 {width:100% !important}
+.W95 {width:95% !important}
+.W90 {width:90% !important}
+.W85 {width:85% !important}
+.W80 {width:80% !important}
+.W75 {width:75% !important}
+.W70 {width:70% !important}
+.W65 {width:65% !important}
+.W60 {width:60% !important}
+.W55 {width:55% !important}
+.W50 {width:50% !important}
+.W45 {width:45% !important}
+.W40 {width:40% !important}
+.W35 {width:35% !important}
+.W30 {width:30% !important}
+.W25 {width:25% !important}
+.W20 {width:20% !important}
+.W15 {width:15% !important}
+.W10 {width:10% !important}
+.W8 {width:8% !important}
+.W7 {width:7% !important}
+.W6 {width:6% !important}
+.W5 {width:5% !important}
+
+/*Text style***************************************************************************************************************************************************************************************************************************/
+	
+/*검정,회색,흰색 계열*/
+.cDark0 {color:#000 !important}
+.cDark3 {color:#333 !important}
+.cDark6 {color:#666 !important}
+.cDark9 {color:#999 !important}
+.cDarkc {color:#ccc !important}
+.cWhite {color:#fff !important}
+
+/*color txt*/
+.fc_r0{color:#ff6600}  /* 주황계열 */
+.font_c0 {color:#666}    /* 그레이색상 */
+.font_c0_9 {color:#999}    /* 그레이색상 */
+.font_c1 {color:#649804} /* 그린계열 사용:주요사항 */
+.font_c2 {color:#ed145b} /* 진분홍계열 사용:주요사항 */
+.font_c3 {color:#fbfe00} /* 노란계열 사용:주요사항 */
+.font_c4 {color:#fff}    /* 흰식 사용:주요사항 */
+.font_c5 {color:#42c8c6} /* 싸이언 계열 */
+.font_c6 {color:#1757aa} /* 파란계열 */
+.font_c7 {color:#6c6fcc} /* 보라계열 */
+.font_c8 {color:#9afffd} /* 싸이언2 */
+.font_c9 {color:#0046b0} /* 파란계열 */
+
+.cBlue {color:#066cde}
+.cCyan {color:#078b78}
+.cGreen {color:#32991c}
+.cOrange {color:#ff6600}
+.cRed {color:#e20101}
+
+
+/*size*/
+.Fs45 {font-size:45px !important}
+.Fs40 {font-size:40px !important}
+.Fs37 {font-size:37px !important}
+.Fs35 {font-size:35px !important}
+.Fs32 {font-size:32px !important}
+.Fs30 {font-size:30px !important}
+.Fs28 {font-size:28px !important}
+.Fs26 {font-size:26px !important}
+.Fs25 {font-size:25px !important}
+.Fs24 {font-size:24px !important}
+.Fs22 {font-size:22px !important}
+.Fs21 {font-size:21px !important}
+.Fs20 {font-size:20px !important}
+.Fs18 {font-size:18px !important}
+.Fs16 {font-size:16px !important}
+.Fs15 {font-size:15px !important}
+.Fs14 {font-size:14px !important}
+.Fs12 {font-size:12px !important}
+.Fs13 {font-size:13px !important}
+.Fs11 {font-size:11px !important}
+.Fs10 {font-size:10px !important}
+
+/*type*/
+.FboldN {font-weight:normal}
+.FboldB {font-weight:bold}
+.Fbold6 {font-weight:600}
+.Fbold5 {font-weight:500}
+.FtypeI {font-style:italic}
+.Un-line {text-decoration: underline}
+.Md-line {text-decoration:line-through}
+
+/*align style***************************************************************************************************************************************************************************************************************************/
+
+/*align*/
+.TxtC {text-align:center !important}
+.TxtL {text-align:left !important}
+.TxtR {text-align:right !important}
+
+/*float,both*/
+.Fl{float:left !important}
+.Fr{float:right !important}
+.Clear{clear:both !important; overflow:hidden}
+
+/*vertical-align*/
+.VaT {vertical-align:top}
+.VaM {vertical-align:middle}
+.VaB {vertical-align:bottom}
+
+.VaT1 {vertical-align:1px}
+.VaT2 {vertical-align:2px}
+.VaT3 {vertical-align:3px}
+.VaT4 {vertical-align:4px}
+.VaT5 {vertical-align:5px}
+.VaT6 {vertical-align:6px}
+.VaT7 {vertical-align:7px}
+.VaT8 {vertical-align:8px}
+.VaT9 {vertical-align:9px}
+.VaT10 {vertical-align:10px}
+
+.VaB1 {vertical-align:-1px}
+.VaB2 {vertical-align:-2px}
+.VaB3 {vertical-align:-3px}
+.VaB4 {vertical-align:-4px}
+.VaB5 {vertical-align:-5px}
+.VaB6 {vertical-align:-6px}
+.VaB7 {vertical-align:-7px}
+.VaB8 {vertical-align:-8px}
+.VaB9 {vertical-align:-9px}
+.VaB10 {vertical-align:-10px}
+
+
+
+/* margin ***************************************************************************************************************************************************************************************************************************/
+
+.ma0{margin:0 !important}
+
+/* margin Top */
+.mt1 {margin-top:1px !important}
+.mt2 {margin-top:2px !important}
+.mt3 {margin-top:3px !important}
+.mt5 {margin-top:5px !important}
+.mt6 {margin-top:6px !important}
+.mt7 {margin-top:7px !important}
+.mt8 {margin-top:8px !important}
+.mt9 {margin-top:9px !important}
+.mt10 {margin-top:10px !important}
+.mt11 {margin-top:11px !important}
+.mt12 {margin-top:12px !important}
+.mt13 {margin-top:13px !important}
+.mt14 {margin-top:14px !important}
+.mt15 {margin-top:15px !important}
+.mt16 {margin-top:16px !important}
+.mt17 {margin-top:17px !important}
+.mt18 {margin-top:18px !important}
+.mt19 {margin-top:19px !important}
+.mt20 {margin-top:20px !important}
+.mt21 {margin-top:21px !important}
+.mt22 {margin-top:22px !important}
+.mt23 {margin-top:23px !important}
+.mt24 {margin-top:24px !important}
+.mt25 {margin-top:25px !important}
+.mt26 {margin-top:26px !important}
+.mt27 {margin-top:27px !important}
+.mt28 {margin-top:28px !important}
+.mt29 {margin-top:29px !important}
+.mt30 {margin-top:30px !important}
+.mt31 {margin-top:31px !important}
+.mt32 {margin-top:32px !important}
+.mt33 {margin-top:33px !important}
+.mt34 {margin-top:34px !important}
+.mt35 {margin-top:35px !important}
+.mt36 {margin-top:36px !important}
+.mt37 {margin-top:37px !important}
+.mt38 {margin-top:38px !important}
+.mt39 {margin-top:39px !important}
+.mt40 {margin-top:40px !important}
+.mt41 {margin-top:41px !important}
+.mt42 {margin-top:42px !important}
+.mt43 {margin-top:43px !important}
+.mt44 {margin-top:44px !important}
+.mt45 {margin-top:45px !important}
+.mt46 {margin-top:46px !important}
+.mt47 {margin-top:47px !important}
+.mt48 {margin-top:48px !important}
+.mt49 {margin-top:49px !important}
+.mt50 {margin-top:50px !important}
+.mt55 {margin-top:55px !important}
+.mt56 {margin-top:56px !important}
+.mt57 {margin-top:57px !important}
+.mt58 {margin-top:58px !important}
+.mt59 {margin-top:59px !important}
+.mt60 {margin-top:60px !important}
+.mt80 {margin-top:80px !important}
+.mt100 {margin-top:100px !important}
+.mt120 {margin-top:120px !important}
+
+/* margin Left */
+.ml0{margin-left:0px !important}
+.ml5{margin-left:5px !important}
+.ml10{margin-left:10px !important}
+.ml15{margin-left:15px !important}
+.ml20{margin-left:20px !important}
+.ml25{margin-left:25px !important}
+.ml30{margin-left:30px !important}
+.ml35{margin-left:35px !important}
+.ml40{margin-left:40px !important}
+.ml45{margin-left:45px !important}
+.ml50{margin-left:50px !important}
+.ml55{margin-left:55px !important}
+.ml60{margin-left:60px !important}
+.ml65{margin-left:65px !important}
+.ml70{margin-left:70px !important}
+.ml75{margin-left:75px !important}
+.ml80{margin-left:80px !important}
+.ml85{margin-left:85px !important}
+.ml90{margin-left:90px !important}
+.ml95{margin-left:95px !important}
+.ml100{margin-left:100px !important}
+
+/* margin Right */
+.mr0{margin-right:0px !important}
+.mr5{margin-right:5px !important}
+.mr10{margin-right:10px !important}
+.mr15{margin-right:15px !important}
+.mr20{margin-right:20px !important}
+.mr25{margin-right:25px !important}
+.mr30{margin-right:30px !important}
+.mr35{margin-right:35px !important}
+.mr40{margin-right:40px !important}
+.mr45{margin-right:45px !important}
+.mr50{margin-right:50px !important}
+.mr55{margin-right:55px !important}
+.mr60{margin-right:60px !important}
+.mr65{margin-right:65px !important}
+.mr70{margin-right:70px !important}
+.mr75{margin-right:75px !important}
+.mr80{margin-right:80px !important}
+.mr85{margin-right:85px !important}
+.mr90{margin-right:90px !important}
+.mr95{margin-right:95px !important}
+.mr100{margin-right:100px !important}
+
+/* margin Bottom */
+.mb0{margin-bottom:0px !important}
+.mb5{margin-bottom:5px !important}
+.mb10{margin-bottom:10px !important}
+.mb15{margin-bottom:15px !important}
+.mb20{margin-bottom:20px !important}
+.mb25{margin-bottom:25px !important}
+.mb30{margin-bottom:30px !important}
+.mb35{margin-bottom:35px !important}
+.mb40{margin-bottom:40px !important}
+.mb45{margin-bottom:45px !important}
+.mb50{margin-bottom:50px !important}
+.mb55{margin-bottom:55px !important}
+.mb60{margin-bottom:60px !important}
+.mb65{margin-bottom:65px !important}
+.mb70{margin-bottom:70px !important}
+.mb75{margin-bottom:75px !important}
+.mb80{margin-bottom:80px !important}
+.mb85{margin-bottom:85px !important}
+.mb90{margin-bottom:90px !important}
+.mb95{margin-bottom:95px !important}
+.mb100{margin-bottom:100px !important}
+
+/* margin top % */
+.mt0p{margin-top:0% !important}
+.mt3p{margin-top:3% !important}
+.mt4p{margin-top:4% !important}
+.mt5p{margin-top:5% !important}
+.mt10p{margin-top:10% !important}
+.mt15p{margin-top:15% !important}
+.mt20p{margin-top:20% !important}
+.mt25p{margin-top:25% !important}
+.mt30p{margin-top:30% !important}
+.mt35p{margin-top:35% !important}
+.mt40p{margin-top:40% !important}
+.mt45p{margin-top:45% !important}
+.mt50p{margin-top:50% !important}
+.mt55p{margin-top:55% !important}
+.mt60p{margin-top:60% !important}
+.mt65p{margin-top:65% !important}
+.mt70p{margin-top:70% !important}
+.mt75p{margin-top:75% !important}
+.mt80p{margin-top:80% !important}
+.mt85p{margin-top:85% !important}
+.mt90p{margin-top:90% !important}
+.mt95p{margin-top:95% !important}
+.mt100p{margin-top:100% !important}
+
+/* margin Bottom % */
+.mb0p{margin-bottom:0% !important}
+.mb3p{margin-bottom:3% !important}
+.mb4p{margin-bottom:4% !important}
+.mb5p{margin-bottom:5% !important}
+.mb10p{margin-bottom:10% !important}
+.mb15p{margin-bottom:15% !important}
+.mb20p{margin-bottom:20% !important}
+.mb25p{margin-bottom:25% !important}
+.mb30p{margin-bottom:30% !important}
+.mb35p{margin-bottom:35% !important}
+.mb40p{margin-bottom:40% !important}
+.mb45p{margin-bottom:45% !important}
+.mb50p{margin-bottom:50% !important}
+.mb55p{margin-bottom:55% !important}
+.mb60p{margin-bottom:60% !important}
+.mb65p{margin-bottom:65% !important}
+.mb70p{margin-bottom:70% !important}
+.mb75p{margin-bottom:75% !important}
+.mb80p{margin-bottom:80% !important}
+.mb85p{margin-bottom:85% !important}
+.mb90p{margin-bottom:90% !important}
+.mb95p{margin-bottom:95% !important}
+.mb100p{margin-bottom:100% !important}
+
+/* padding ***************************************************************************************************************************************************************************************************************************/
+
+.pa (padding:0)
+
+/* padding Top */
+.pt0{padding-top:0px !important}
+.pt5{padding-top:5px !important}
+.pt10{padding-top:10px !important}
+.pt15{padding-top:15px !important}
+.pt20{padding-top:20px !important}
+.pt25{padding-top:25px !important}
+.pt30{padding-top:30px !important}
+.pt35{padding-top:35px !important}
+.pt40{padding-top:40px !important}
+.pt45{padding-top:45px !important}
+.pt50{padding-top:50px !important}
+.pt55{padding-top:55px !important}
+.pt60{padding-top:60px !important}
+.pt65{padding-top:65px !important}
+.pt70{padding-top:70px !important}
+.pt75{padding-top:75px !important}
+.pt80{padding-top:80px !important}
+.pt85{padding-top:85px !important}
+.pt90{padding-top:90px !important}
+.pt95{padding-top:95px !important}
+.pt100{padding-top:100px !important}
+
+/* padding Left */	
+.pl0{padding-right:0px !important}
+.pl5{padding-right:5px !important}
+.pl10{padding-right:10px !important}
+.pl15{padding-right:15px !important}
+.pl20{padding-right:20px !important}
+.pl25{padding-right:25px !important}
+.pl30{padding-right:30px !important}
+.pl35{padding-right:35px !important}
+.pl40{padding-right:40px !important}
+.pl45{padding-right:45px !important}
+.pl50{padding-right:50px !important}
+.pl55{padding-right:55px !important}
+.pl60{padding-right:60px !important}
+.pl65{padding-right:65px !important}
+.pl70{padding-right:70px !important}
+.pl75{padding-right:75px !important}
+.pl80{padding-right:80px !important}
+.pl85{padding-right:85px !important}
+.pl90{padding-right:90px !important}
+.pl95{padding-right:95px !important}
+.pl100{padding-right:100px !important}
+
+/* padding Right */	
+.pr0{padding-right:0px !important}
+.pr5{padding-right:5px !important}
+.pr10{padding-right:10px !important}
+.pr15{padding-right:15px !important}
+.pr20{padding-right:20px !important}
+.pr25{padding-right:25px !important}
+.pr30{padding-right:30px !important}
+.pr35{padding-right:35px !important}
+.pr40{padding-right:40px !important}
+.pr45{padding-right:45px !important}
+.pr50{padding-right:50px !important}
+.pr55{padding-right:55px !important}
+.pr60{padding-right:60px !important}
+.pr65{padding-right:65px !important}
+.pr70{padding-right:70px !important}
+.pr75{padding-right:75px !important}
+.pr80{padding-right:80px !important}
+.pr85{padding-right:85px !important}
+.pr90{padding-right:90px !important}
+.pr95{padding-right:95px !important}
+.pr100{padding-right:100px !important}
+
+/* padding Bottom */	
+.pb0{padding-bottom:0px !important}
+.pb5{padding-bottom:5px !important}
+.pb10{padding-bottom:10px !important}
+.pb15{padding-bottom:15px !important}
+.pb20{padding-bottom:20px !important}
+.pb25{padding-bottom:25px !important}
+.pb30{padding-bottom:30px !important}
+.pb35{padding-bottom:35px !important}
+.pb40{padding-bottom:40px !important}
+.pb45{padding-bottom:45px !important}
+.pb50{padding-bottom:50px !important}
+.pb55{padding-bottom:55px !important}
+.pb60{padding-bottom:60px !important}
+.pb65{padding-bottom:65px !important}
+.pb70{padding-bottom:70px !important}
+.pb75{padding-bottom:75px !important}
+.pb80{padding-bottom:80px !important}
+.pb85{padding-bottom:85px !important}
+.pb90{padding-bottom:90px !important}
+.pb95{padding-bottom:95px !important}
+.pb100{padding-bottom:100px !important}
