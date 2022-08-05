@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+  <meta name="title" content="대메뉴1 : 국문">
+  <meta name="description" content="국문,대메뉴1">
+  <meta name="keyword" content="국문">
+  <meta name="author" content="국문">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="국문">
+  <meta property="og:site_name" content="국문">
+  <meta property="og:description" content="국문">
+  <title>회원</title>
+  <!-- 공통 CSS -->
+  <link rel="stylesheet" href="css/basic.css">
+  <!-- 서브 CSS -->
+  <link rel="stylesheet" href="css/sub.css">
+  <link rel="stylesheet" href="css/member.css">
+  <!-- 공통 JS -->
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <!-- 서브 JS -->
+  <script src="js/sub.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div class="basicTabWrap">
+        <div class="content_view_tab">
+            <ul class="depth4">
+                <li><a href="agree.html">동의</a></li>  
+                <li><a href="certification.html">인증</a></li> 
+                <li class="on"><a href="input.html">정보입력</a></li>
+                <li><a href="complete.html">가입완료</a></li>
+                <li><a href="login.html">로그인</a></li>          
+                <li><a href="find.html">찾기</a></li>     
+                <li><a href="leave.html">탈퇴</a></li> 
+                <li><a href="satisfaction.html">만족도</a></li> 
+            </ul>
+        </div>
+    </div>
+    <section id="container">
+        <div id="contentWrap">
+
+            <section id="content">
+                <section class="content_info">
+                    <h1 class="title">정보입력</h1>
+                </section>
+
+                <div id="contents_body">
+                    <!-- 컨텐츠 영역 -->
+                    <ul class="member_step">
+                        <li>
+                            <small>STEP 01</small>
+                            <strong>약관동의</strong>
+                        </li>
+                        <li>
+                            <small>STEP 02</small>
+                            <strong>본인인증</strong>
+                        </li>
+                        <li class="active">
+                            <span class="hidden">현재 절차</span>
+                            <small>STEP 03</small>
+                            <strong>정보입력</strong>
+                        </li>
+                        <li>
+                            <small>STEP 04</small>
+                            <strong>가입완료</strong>
+                        </li>
+                    </ul>
+                     
+                    <div class="board_box type2">
+                        <span class="img"><i class="xi-file-text-o" aria-hidden="true"></i></span>
+                        <h2 class="title">정보입력</h2>
+                        <p class="desc">회원가입을 위해 정보를 입력해주세요.</p>
+                    </div>
+                     
+                    <div class="board_list">
+                        <table class="tstyle_write">
+                            <caption>회원가입 정보입력 테이블입니다.</caption>
+                            <colgroup><col width="20%"><col></colgroup>
+                            <tbody>
+                            <tr>
+                                <th><label for="m_id">아이디 <span class="point1" title="필수 입력 정보">*</span></label></th>
+                                <td>
+                                    <input type="text" name="m_id" id="m_id" class="form_textbox" maxlength="12" title="아이디를 입력하세요." placeholder="아이디를 입력하세요.">
+                                    <a href="/member/idCheck.es" target="_blank" title="새창" class="btn_line"><span>중복확인</span> <i class="xi-check"></i></a>
+                                    <p>5자리 이상, 영문자 1자 이상</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="passwd">비밀번호 <span class="point1" title="필수 입력 정보">*</span></label></th>
+                                <td>
+                                    <input type="password" name="passwd" id="passwd" maxlength="20" class="form_textbox" title="비밀번호를 입력하세요." autocomplete="off" placeholder="비밀번호를 입력하세요.">
+                                    <p>영문/숫자/특수문자 3가지 조합 9자리 이상 20자리 이하. <span class="point1">\|[]{}'";:/?.&gt;,&lt;,%,#,&amp; 제외</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="passwd2">비밀번호 확인 <span class="point1" title="필수 입력 정보">*</span></label></th>
+                                <td><input type="password" name="passwd2" id="passwd2" maxlength="20" class="form_textbox" title="비밀번호 확인을 위해 비밀번호를 한번더 입력하세요." autocomplete="off" placeholder="비밀번호를 입력하세요."></td>
+                            </tr>
+                            <tr>
+                                <th><label for="m_name">성명 <span class="point1" title="필수 입력 정보">*</span></label></th>
+                                <td class="bTop">
+                                    홍길동
+                                    <input type="hidden" name="m_name" id="m_name" value="조민지">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="m_birth_y">생년월일 <span class="point1" title="필수 입력 정보">*</span></label></th>
+                                <td>
+                                    <span class="form_select">
+                                        <select name="m_birth_y" id="m_birth_y" title="생년">
+                                            <option value="">년</option>
+                                        </select>
+                                    </span>
+                                    <span class="form_select">
+                                        <select name="m_birth_m" id="m_birth_m" title="생월">
+                                            <option value="">월</option>                                           
+                                        </select>
+                                    </span>
+                                    <span class="form_select">
+                                        <select name="m_birth_d" id="m_birth_d" title="생일">
+                                            <option value="">일</option>
+                                        </select>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="m_sex_m">성별 <span class="point1" title="필수 입력 정보">*</span></label></th>
+                                <td>
+                                    <span class="form_radio">
+                                        <input type="radio" name="m_sex" id="m_sex_m" value="M"> <label for="m_sex_m"> 남자</label>
+                                    </span>
+                                    <span class="form_radio">
+                                        <input type="radio" name="m_sex" id="m_sex_f" value="F" checked="checked"> <label for="m_sex_f"> 여자</label>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="mobile_no">핸드폰번호 <span class="point1" title="필수 입력 정보">*</span></label></th>
+                                <td>
+                                    <span class="form_select">
+                                        <select name="m_phone01" id="member_mobile1" title="휴대번호 첫째자리를 선택하세요.">                                                
+                                            <option value="010">010</option>                                             
+                                        </select>
+                                    </span>
+                                    <input type="text" name="m_phone02" id="m_phone02" class="form_textbox number" maxlength="4" value="" title="핸드폰번호를 입력하세요.">
+                                    <input type="text" name="m_phone03" id="m_phone03" class="form_textbox number" maxlength="4" value="" title="핸드폰번호를 입력하세요.">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="m_email01">이메일 <span class="point1" title="필수 입력 정보">*</span></label></th>
+                                <td>
+                                    <div class="form_mail">
+                                        <input type="text" name="m_email01" id="m_email01" maxlength="30" class="form_textbox" value="" title="이메일 아이디를 입력하세요.">
+                                        @
+                                        <input type="text" name="m_email02" id="m_email02" maxlength="30" class="form_textbox" value="" title="이메일 도메인을 입력하세요.">
+                     
+                                        <div class="form_select">
+                                            <select title="이메일 도메인을 선택하세요.">
+                                                <option value="">직접입력</option>                                        
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                     
+                    <div class="board_btns">
+                        <a href="" class="btn type1"><span>취소</span></a>
+                        <a href="#" class="btn type2"><span>다음</span></a>
+                    </div>
+                    <!-- // -->
+                
+                </div>
+            </section>
+            <!--// #content -->
+
+        </div>
+        <!--// #contentWrap -->
+    </section><!-- #container -->
+
+    <footer>
+    </footer>
+</div>
+
+</body>
+
+</html>

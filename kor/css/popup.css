@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/* 팝업존-v2 */
+.fp-viewing-1 .popup-open{display: none !important}
+.fp-viewing-2 .popup-open{display: none !important}
+.fp-viewing-3 .popup-open{display: none !important}
+.fp-viewing-4 .popup-open{display: none !important}
+/*.popup-open{text-align: center; font-size: .65rem; color:#d5d5d5; position: absolute; top: 5rem; right: 5rem; color: #fff; z-index:1}*/
+body[class^=fp] #header .top_service .popup-open{display:block}
+/*.popup-open .popupzone-title{display:inline-block}*/
+.popup-open .popup-count {width: 1.6rem;height: 1.6rem;background: #377cfd; border-radius: 50%; display: inline-block;font-size: 1.2rem; line-height: 1.6rem;text-align: center; color: #fff;  vertical-align: top; margin: 1.2rem 0 1.2rem .5rem; font-weight: 100;}
+.popup-open.inactive {opacity: 0; visibility: hidden}
+.popup-open.hide {display: none}
+.popupzone-v2 {opacity: 0; visibility: hidden; -webkit-transition: all .5s ease; transition: all .5s ease; position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 999; background: rgba(0, 0, 0, 0.7); height: 100vh; width: 100%}
+.popupzone-v2 h2.popupzone-title {font-family: "Montserrat", sans-serif; font-size: 4.5rem; font-weight: 600; color: #fff; text-align: center; letter-spacing: -0.05rem; margin-bottom:3rem;}
+.popupzone-v2 h2.popupzone-title img{width: 8.7rem;    vertical-align: top;}
+.popupzone-v2 h2.popupzone-title span{ vertical-align: top; line-height: 5.3rem; display: inline-block; margin-top: .6rem; margin-left: 1rem;}
+
+.popupzone-v2.active {opacity: 1; visibility: visible}
+.popupzone-v2 .popupzone-container {text-align: center; position: absolute !important; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 200rem; max-width: 100%}
+.popupzone-v2 .popupzone-container .popupzone-group {width: 134rem; max-width: calc(100% - 10rem); position: relative; color: #fff; margin: 0 auto}
+.popupzone-v2 .popupzone-container .popupzone-group ul {width: 100%; white-space: nowrap; text-align: center; margin: 0rem auto}
+.popupzone-v2 .popupzone-container .popupzone-group ul li {display: inline-block; margin-right: 2rem}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper {margin: 0 auto}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper li {display: inline-block; vertical-align: middle}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper .bx-controls {width: calc(100% + 8rem); height: 2rem; position: absolute; left: calc(50% - 0rem); top: 50%; -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%)}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper .bx-controls .bx-pager {padding-top: .6rem}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper .bx-controls .bx-pager a {width: 12px; height: 12px; background-color: #fff; border: 2px solid #fff; -webkit-box-sizing: border-box; box-sizing: border-box; border-radius: 50%}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper .bx-controls .bx-pager a.active {background-color: transparent; border: 2px solid #fff; -webkit-box-sizing: border-box; box-sizing: border-box}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper .bx-controls .bx-controls-direction a {width: 3rem; height:3rem;line-height: 3rem; display: block !important; overflow: hidden; position: absolute; top: 0; margin: 0; background: none; text-indent: -9999px; z-index: 9999; text-align: center}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper .bx-controls .bx-controls-direction a:before {content: ''; font-size: 3rem; display: block; width: 100%; height: 100%; font-family: "xeicon"; color: #fff; text-indent: 0; line-height: inherit}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper .bx-controls .bx-controls-direction a.bx-prev {left: 4%}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper .bx-controls .bx-controls-direction a.bx-next {right: 4%}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper .bx-controls .bx-controls-direction a.bx-next:before {content: ''}
+.popupzone-v2 .popupzone-container .popupzone-item .popupzone-close {position: absolute; right: calc(50% - 47.5rem); top: calc(50% - 130px); -webkit-transition: all .5s ease; transition: all .5s ease; border-radius: 50%; background: -webkit-gradient(linear, left top, right bottom, color-stop(20%, #235d89), to(#569e94)); background: linear-gradient(to right, #235d89 20%, #569e94 100%); width: 4.3rem; height: 4.3rem; text-align: center; padding-top: 1.75rem; line-height: 1rem; color: #fff; font-size: .6rem; font-weight: 600}
+.popupzone-v2 .popupzone-container .popupzone-item .popupzone-close::before {content: ''; font-size: .7rem; position: absolute; left: 50%; -webkit-transform: translateX(-50%) rotate(45deg); transform: translateX(-50%) rotate(45deg); top: 1.1rem; font-family: "xeicon"; height: 1rem; line-height: 1rem; width: 1rem}
+.popupzone-v2 .popupzone-container .popupzone-item .popupzone-close:hover:before {-webkit-transform: rotate(135deg) translateX(-50%); transform: rotate(135deg) translateX(-50%); -webkit-transition: all .3s; transition: all .3s; left: calc(50% - .8rem); top: 1.45rem}
+.popupzone-v2 .popupzone-container .popupzone-item .popupzone-close .popup-countW {font-size: .75rem}
+.popupzone-v2 .popupzone-container .popupzone-item .popupzone-close .popup-countW .popup-count {color: #ffe87c; font-weight: 400}
+.popupzone-v2 .popupzone-container .popupzone-item .popupzone-btn-close2 {display: none; height: 2.25rem; margin: 2rem 1rem; padding: 0 2rem; border-radius: 2.25rem; background-color: #000; line-height: 2.25rem}
+.popupzone-v2 .popupzone-container .popupzone-item .popupzone-btn-close2:after {display: inline-block; font-family: "xeicon"; margin-left: 0.5rem; content: ''; vertical-align: middle; -webkit-transition: all 0.2s; transition: all 0.2s}
+.popupzone-v2 .popupzone-container .popupzone-item .popupzone-btn-close2:hover:after {-webkit-transform: rotate(180deg); transform: rotate(180deg)}
+.popupzone-v2 .popupzone-container .popupzone-item .popupzone-btn-close.inactive {display: none}
+.popupzone-v2 .popupzone-container .popupzone-item2 {margin-top: 5rem; font-size: .9rem; text-align: center}
+.popupzone-v2 .popupzone-container .popupzone-item2 .popupzone-label {font-family: "Noto Sans KR", sans-serif; display: inline-block; height: 5.5rem; margin: 0 2rem .5rem; padding: 0 4rem; background-color: #000; line-height: 5.5rem;font-size: 1.8rem;border-top-left-radius: 3rem;  border-bottom-right-radius: 3rem;}
+.popupzone-v2 .popupzone-container .popupzone-item2 .popupzone-label span {color: #f49500; font-weight: 600}
+.popupzone-v2 .popupzone-container .popupzone-item2 .popupzone-label.popupzone-close:after {content: ''; display: inline-block; font-family: "xeicon"; margin-left: 0.5rem; margin-bottom: 0.2rem; vertical-align: middle; -webkit-transition: all 0.2s; transition: all 0.2s}
+.popupzone-v2 .popupzone-container .popupzone-item2 .popupzone-label.popupzone-close:hover:after, .popupzone-v2 .popupzone-container .popupzone-item2 .popupzone-label.popupzone-close:focus:after {-webkit-transform: rotate(180deg); transform: rotate(180deg)}
+.popupzone-v2 img{width: 100%; max-width: 36rem;}
+
+@media screen and (max-width:1440px){
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper .bx-controls .bx-controls-direction a.bx-prev {left: 0}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper .bx-controls .bx-controls-direction a.bx-next {right: 0}
+}
+
+@media screen and (max-width:1400px){
+.popupzone-v2 .popupzone-container .popupzone-item .popupzone-close {display: none}
+}
+
+
+@media screen and (max-width:499px){
+.popupzone-v2 h2.popupzone-title {font-size: 3rem; line-height: normal; margin-bottom: 1rem;}
+.popupzone-v2 h2.popupzone-title img{width: 6rem;}
+.popupzone-v2 h2.popupzone-title span{line-height: 4.8rem; margin-top: 0;}
+.popupzone-v2 .popupzone-container .popupzone-item2 .popupzone-label {padding: 0 1rem; margin: 0 .1rem .5rem}
+.popupzone-v2 .popupzone-container .popupzone-group .bx-wrapper .bx-controls .bx-controls-direction a{top: -60%}
+}

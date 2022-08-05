@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+<meta name="title" content="대메뉴1 : 국문">
+<meta name="description" content="국문,대메뉴1">
+<meta name="keyword" content="국문">
+<meta name="author" content="국문">
+<meta property="og:type" content="website">
+<meta property="og:title" content="국문">
+<meta property="og:site_name" content="국문">
+<meta property="og:description" content="국문">
+<title>Media View</title>
+<!-- 공통 CSS -->
+<link rel="stylesheet" href="css/basic.css">
+<!-- 서브 CSS -->
+<link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/board_v3.css">
+<!-- 공통 JS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<!-- 서브 JS -->
+<script src="js/sub.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div class="basicTabWrap">
+        <div class="content_view_tab">
+            <ul class="depth4">
+                <li><a href="table_list.html">Table List</a></li>          
+                <li><a href="table_view.html">Table View</a></li>
+                <li><a href="table_write.html">Table Write</a></li>
+                <li><a href="gallery_list.html">Gallery List</a></li>          
+                <li><a href="gallery_view.html">Gallery View</a></li>
+                <li><a href="media_list.html">Media List</a></li>  
+                <li class="on"><a href="media_view.html">Media View</a></li>
+                <li><a href="wide_list.html">Wide List</a></li>  
+                <li><a href="thumb_list.html">Thumb List</a></li>
+                <li><a href="ebook_list.html">eBook List</a></li>
+                <li><a href="ebook_view.html">eBook View</a></li>
+                <li><a href="pdf_list.html">pdf List</a></li>
+                <li><a href="card_list.html">Card List</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="calendar.html">calendar</a></li>
+<!--                <li><a href="atomic.html">atomic</a></li>-->
+            </ul>
+        </div>
+    </div>
+	
+	<section id="container">
+		<div id="contentWrap">
+
+			<section id="content">
+				<section class="content_info">
+					<h1 class="title">Media View</h1>
+				</section>
+
+				<div id="contents_body">
+					<!-- 컨텐츠 영역 -->
+					<article class="board_view">
+						<h2 class="title">
+                           미디어 게시판 제목
+						</h2>
+						<ul class="info">
+							<li class="date"><strong>작성일</strong><span>2022.07.01 16:26</span></li>
+							<li class="hit"><strong>조회수</strong><span>235</span></li>
+						</ul>
+						<div class="contents">
+							<!-- 동영상 내용 -->
+							<div class="media_view">
+								<div class="player">
+									<video id="video2" width="100%" controls="controls">
+										<source src="/galleryImgView.es?bid=0001&amp;list_no=60&amp;seq=2" type="video/mp4">                                                    
+									</video>
+								</div>
+								<br><br>
+
+								<!-- 유투브 일 때 -->
+								<div class="youtube"><iframe title="test" width="100%" height="100%" src="https://www.youtube.com/embed/a9JoHtHly-w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe></div>
+								<!-- //유투브 일 때 -->
+								
+								<div class="desc" tabindex="0">                                    
+									<p>신종 코로나바이러스감염증-19 확진자 다수발생에 따라 보건소에서 현장의 적극적인 감염병 대처를 위해</p>
+									<p>진료업무, 민원업무를 잠정중단 하오니 불편하시더라도 양해하여 주시기 바랍니다.</p>
+									<p><br></p>
+
+									<p>
+										○ 일&nbsp;&nbsp;&nbsp; 시 : 2020. 2. 24(월) 09:00 ~<br>
+										○ 대&nbsp;&nbsp;&nbsp; 상 : 보건소 진료업무 및 모든 민원업무<br>
+										○ 내&nbsp;&nbsp;&nbsp; 용 : 보건소의 신종 코로바이러스감염증-19 적극 대처를 <br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 위한 진료 및 민원업무 잠정중단<br>
+									</p>
+
+									<p>○ 문 의 처 : 동구보건소 건강정책과(☎ 608-3261)</p>
+									<p><br></p>
+									<p>채용신체검사결과서(공무원, 일반), 각종 면허·자격 발급용 건강진단서, </p>
+									<p>운전면허 신체검사서 발급기관은 붙임파일을 참고하시기 바랍니다.</p>
+								</div>
+							</div>
+							<!-- //동영상 내용 -->
+						</div>           
+					</article>
+
+					<div class="board_btns">
+						<button type="button" class="btn type1">삭제</button>
+						<button type="button" class="btn type1">수정</button>
+						<button type="button" class="btn ">목록</button>  
+                    </div>
+                    
+                    <ul class="prevnext">
+                        <li class="prev"><span>이전글</span><a href="">이전글 제목입니다.</a></li>          
+                        <li class="next"><span>다음글</span><a href="">다음글 제목입니다.</a></li>          
+                    </ul>
+					<!-- // -->
+
+				</div>
+
+			</section><!--// #content -->
+			<a href="#wrap" class="go_top"><i class="xi-angle-up-min"></i><span>TOP</span></a>
+		</div><!--// #contentWrap -->
+	</section><!-- #container -->
+	
+</div>
+
+
+</body>
+</html>

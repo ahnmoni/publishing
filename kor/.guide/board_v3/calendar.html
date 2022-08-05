@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+<meta name="title" content="대메뉴1 : 국문">
+<meta name="description" content="국문,대메뉴1">
+<meta name="keyword" content="국문">
+<meta name="author" content="국문">
+<meta property="og:type" content="website">
+<meta property="og:title" content="국문">
+<meta property="og:site_name" content="국문">
+<meta property="og:description" content="국문">
+<title>Calendar</title>
+<!-- 공통 CSS -->
+<link rel="stylesheet" href="css/basic.css">
+<!-- 서브 CSS -->
+<link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/board_v3.css">
+<!-- 공통 JS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<!-- 서브 JS -->
+<script src="js/sub.js"></script>
+<!-- 캘린더 -->
+<link href='packages/core/main.css' rel='stylesheet' />
+<script src='packages/core/main.js'></script>
+<script src='packages/daygrid/main.js'></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
+      header: {
+        left: '',
+        center: 'prev, title, next',
+        right:''
+        //right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+      },
+      defaultDate: '2022-07-01',
+      navLinks: true, // can click day/week names to navigate views
+      businessHours: true, // display business hours
+      editable: true,
+      events: [
+        
+        {
+          title: '[회사]전체 생활관 봄맞이 생활관 대청소 안내',
+          start: '2022-07-01',
+          end: '2022-07-04',
+          color: '#dc475c'
+        },
+        {
+          title: 'Conference',
+          start: '2022-07-02',
+          end: '2022-07-02'
+        },
+        {
+          title: 'Meeting',
+          start: '2022-07-02',
+          end: '2022-07-06',
+          color: '#5eb9b6'
+        },
+        {
+          title: '[회사]최대 4개까지 일정목록 보이게',
+          start: '2022-07-02',
+          end: '2022-07-07',
+          color: '#835eb9'
+        },
+        {
+          title: 'Business Lunch',
+          start: '2022-07-18',
+          constraint: 'businessHours'
+        },
+        {
+          title: 'Meeting',
+          start: '2022-07-09T11:00:00',
+          constraint: 'Meeting', // defined below
+          color: '#5eb9b6'
+        },                
+        {
+          title: 'Party',
+          start: '2022-07-29T20:00:00'
+        },
+        // areas where "Meeting" must be dropped
+        {
+          groupId: 'availableForMeeting',
+          start: '2022-07-25T10:00:00',
+          end: '2022-07-25T16:00:00',
+          rendering: 'background'
+        },
+        {
+          groupId: 'availableForMeeting',
+          start: '2022-07-28T10:00:00',
+          end: '2022-07-28T16:00:00',
+          rendering: 'background'
+        }
+      ]
+    });
+
+    calendar.render();
+  });
+
+  
+
+</script>
+</head>
+<body>
+<div id="wrap">
+    <div class="basicTabWrap">
+        <div class="content_view_tab">
+            <ul class="depth4">
+                <li><a href="table_list.html">Table List</a></li>          
+                <li><a href="table_view.html">Table View</a></li>
+                <li><a href="table_write.html">Table Write</a></li>
+                <li><a href="gallery_list.html">Gallery List</a></li>          
+                <li><a href="gallery_view.html">Gallery View</a></li>
+                <li><a href="media_list.html">Media List</a></li>  
+                <li><a href="media_view.html">Media View</a></li>
+                <li><a href="wide_list.html">Wide List</a></li>  
+                <li><a href="thumb_list.html">Thumb List</a></li>
+                <li><a href="ebook_list.html">eBook List</a></li>
+                <li><a href="ebook_view.html">eBook View</a></li>
+                <li><a href="pdf_list.html">pdf List</a></li>
+                <li><a href="card_list.html">Card List</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li class="on"><a href="calendar.html">calendar</a></li>
+            </ul>
+        </div>
+    </div>
+    <section id="container">
+    <div id="contentWrap">
+
+        <section id="content">
+            <section class="content_info">
+                <h1 class="title">Calendar</h1>
+            </section>
+
+            <section id="content_detail" class="content_body">
+                <div id='calendar'></div>
+                <article class="schedule_layer">
+                    <h1 class="title">Terzeiltle Conference</h1>
+                    <div class="info">
+                        2018.08.31 ~ 2018.09.02
+                    </div>
+                    <div class="cont">
+                        등록된 일정의 내용이 나옵니다. 등록된 일정의 내용이 나옵니다. 등록된 일정의 내용이 나옵니다. 등록된 일정의 내용이 나옵니다. 등록된 일정의 내용이 나옵니다. 등록된 일정의 내용이 나옵니다.
+                    </div>
+                    <div class="BtnArea">
+                        <a href="#" class="btn-line type2">확인</a>
+                    </div>
+                    <a href="#" class="close"><i class="xi-close-thin"></i></a>
+                </article>
+
+            </section><!--// #content_detail, .content_body -->
+        </section><!--// #content -->
+        <a href="#wrap" class="go_top"><i class="xi-angle-up-min"></i><span>TOP</span></a>
+    </div><!--// #contentWrap -->
+    </section><!-- #container -->
+</div>
+
+
+</body>
+</html>

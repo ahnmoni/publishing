@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*-------------------------------------------------
+title       : 콘텐츠 반응형
+Author      : MONI
+Create date : 2021-06-02
+-------------------------------------------------*/
+@media (max-width: 768px) { .table_wrap.responsive { overflow: hidden; overflow-x: auto; padding-bottom: 1rem; }
+  .table_wrap.responsive .horizontal_scroll { display: block; text-align: center; color: #777; font-size: 2rem; margin-bottom: 1rem; }
+  .table_wrap.responsive table { min-width: 700px; } }

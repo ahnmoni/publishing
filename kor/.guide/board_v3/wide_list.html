@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+<meta name="title" content="대메뉴1 : 국문">
+<meta name="description" content="국문,대메뉴1">
+<meta name="keyword" content="국문">
+<meta name="author" content="국문">
+<meta property="og:type" content="website">
+<meta property="og:title" content="국문">
+<meta property="og:site_name" content="국문">
+<meta property="og:description" content="국문">
+<title>Wide List</title>
+<!-- 공통 CSS -->
+<link rel="stylesheet" href="css/basic.css">
+<!-- 서브 CSS -->
+<link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/board_v3.css">
+<!-- 공통 JS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<!-- 서브 JS -->
+<script src="js/sub.js"></script>
+</head>
+
+<body>
+
+  <div id="wrap">
+    <div class="basicTabWrap">
+      <div class="content_view_tab">
+        <ul class="depth4">
+            <li><a href="table_list.html">Table List</a></li>       
+            <li><a href="table_view.html">Table View</a></li>
+            <li><a href="table_write.html">Table Write</a></li>
+            <li><a href="gallery_list.html">Gallery List</a></li>          
+            <li><a href="gallery_view.html">Gallery View</a></li>
+            <li><a href="media_list.html">Media List</a></li>  
+            <li><a href="media_view.html">Media View</a></li>
+            <li class="on"><a href="wide_list.html">Wide List</a></li>  
+            <li><a href="thumb_list.html">Thumb List</a></li>
+            <li><a href="ebook_list.html">eBook List</a></li>
+            <li><a href="ebook_view.html">eBook View</a></li>
+            <li><a href="pdf_list.html">pdf List</a></li>
+            <li><a href="card_list.html">Card List</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="calendar.html">calendar</a></li>
+<!--            <li><a href="atomic.html">atomic</a></li>-->
+        </ul>
+      </div>
+    </div>
+    <section id="container">
+        <div id="contentWrap">
+
+            <section id="content">
+                <section class="content_info">
+                    <h1 class="title">Wide List</h1>
+                    <div class="more_link_wrap">
+                        <a href="wide_list.html" class="on">기본</a>
+                        <a href="wide_list_2.html">번호</a>
+                    </div>  
+                    <p style="margin-top: 1rem;">.wide_list 한 줄에 1개 default, col2 추가 시 한 줄에 2개 </p>
+                </section>
+
+                <div id="contents_body">
+                    <!-- 컨텐츠 영역 -->
+                    <div class="board_info">
+                        <form name="srhForm" id="srhForm" method="post" action="/board.es?mid=a10201000000&amp;bid=0001">
+                            <fieldset>
+                                <legend class="blind">검색</legend>
+                                <div class="form"> 
+                                    <p class="item">
+                                        <select name="keyField" id="select" title="검색어 분류를 선택하세요." class="form_select">
+                                            <option value="" selected="selected">전체</option>
+                                            <option value="" >제목</option>
+                                            <option value="" >내용</option>
+                                            <option value="" >작성자</option>
+                                        </select>  
+                                    </p>
+                        
+                                    <span class="item type1"><input type="text" name="keyWord" class="form_textbox" placeholder="검색어를 입력하세요" title="검색어를 입력하세요" value=""></span>
+                                    <span class="item type1 btn"><button type="submit" class="Btn-Gray Xs">검색</button></span>
+                                </div>                
+                            </fieldset>
+                        </form>
+                        
+                        <p class="page">
+                            <span class="total">전체 <b>100건</b> </span> <span class="current">현재 페이지 <strong>1</strong>/<b>10</b></span>
+                        </p>
+                    </div>
+                    
+                    <div class="board_list">
+                        <ul class="wide_list ">
+                            <li>
+                                <a href="">
+                                    <div class="txt_box">
+                                        <span class="divi divi1">연구성과</span>
+                                        <strong class="title">제목이 들어갑니다. 아주 긴 제목의 경우 이렇게 보입니다. 제목이 들어갑니다. 아주 긴 제목의 경우 이렇게 보입니다. 제목이 들어갑니다. 아주 긴 제목의 경우 이렇게 보입니다.</strong>
+                                        <p class="desc line2">
+                                            코로나 19 바이러스의 확산으로 비대면 기술에 대한 관심이 커진 가운데 우리 삶의 모습을 바꿀 수 있는 다양한 로봇기술을 조망하고, 
+                                            특히 우리 삶과 밀접한 의료 및 산업용 로봇기술의 경쟁력 발전을 모색하기 위한 자리가 마련된다. 코로나 19 바이러스의 확산으로 비대면 기술에 대한 관심이 커진 가운데 우리 삶의 모습을 바꿀 수 있는 다양한 로봇기술을 조망하고, 특히 우리 삶과 밀접한 의료 및 산업용 로봇기술의 경쟁력 발전을 모색하기 위한 자리가 마련된다.
+                                        </p>
+                                        <div class="etc_info">
+                                            <span class="date"><em>작성일</em> 2022.07.01</span>
+                                            <span class="hit"><em>조회수</em> 21</span>
+                                        </div>
+                                        <div class="etc_info">
+                                            <span class="date"><em>출처</em> PLASMA ENVIRONMENTAL SCIENCE&TECHNOLOGY</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="txt_box">
+                                        <span class="divi divi2">구분</span>
+                                        <strong class="title">2줄 표시 : .title에 .line2 추가 / 3줄 표시 : .title에 .line3 추가 / 모두 표시 : .title에 .nolimit 추가</strong>
+                                        <p class="desc line2">
+                                            2줄 표시 : .desc .line2 추가 / 3줄 표시 : .desc .line3 추가 / 모두 표시 : .desc .nolimit 추가
+                                        </p>
+                                        <div class="etc_info">
+                                            <span class="date"><em>작성일</em> 2022.07.01</span>
+                                            <span class="hit"><em>조회수</em> 21</span>
+                                        </div>
+                                        <div class="etc_info">
+                                            <span class="date"><em>출처</em> PLASMA ENVIRONMENTAL SCIENCE&TECHNOLOGY</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="txt_box">
+                                        <span class="divi divi2">구분</span>
+                                        <strong class="title">제목이 들어갑니다. </strong>
+                                        <p class="desc line2">
+                                            코로나 19 바이러스의 확산으로 비대면 기술에 대한 관심이 커진 가운데 우리 삶의 모습을 바꿀 수 있는 다양한 로봇기술을 조망하고, 
+                                            특히 우리 삶과 밀접한 의료 및 산업용 로봇기술의 경쟁력 발전을 모색하기 위한 자리가 마련된다. 
+                                        </p>
+                                        <div class="etc_info">
+                                            <span class="date"><em>작성일</em> 2022.07.01</span>
+                                            <span class="hit"><em>조회수</em> 21</span>
+                                        </div>
+                                        <div class="etc_info">
+                                            <span class="date"><em>출처</em> PLASMA ENVIRONMENTAL SCIENCE&TECHNOLOGY</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="txt_box">
+                                        <span class="divi divi2">구분</span>
+                                        <strong class="title">제목이 들어갑니다. </strong>
+                                        <p class="desc line2">
+                                            코로나 19 바이러스의 확산으로 비대면 기술에 대한 관심이 커진 가운데 우리 삶의 모습을 바꿀 수 있는 다양한 로봇기술을 조망하고, 
+                                            특히 우리 삶과 밀접한 의료 및 산업용 로봇기술의 경쟁력 발전을 모색하기 위한 자리가 마련된다. 
+                                        </p>
+                                        <div class="etc_info">
+                                            <span class="date"><em>작성일</em> 2022.07.01</span>
+                                            <span class="hit"><em>조회수</em> 21</span>
+                                        </div>
+                                        <div class="etc_info">
+                                            <span class="date"><em>출처</em> PLASMA ENVIRONMENTAL SCIENCE&TECHNOLOGY</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="txt_box">
+                                        <span class="divi divi2">구분</span>
+                                        <strong class="title">제목이 들어갑니다. </strong>
+                                        <p class="desc line2">
+                                            코로나 19 바이러스의 확산으로 비대면 기술에 대한 관심이 커진 가운데 우리 삶의 모습을 바꿀 수 있는 다양한 로봇기술을 조망하고, 
+                                            특히 우리 삶과 밀접한 의료 및 산업용 로봇기술의 경쟁력 발전을 모색하기 위한 자리가 마련된다. 
+                                        </p>
+                                        <div class="etc_info">
+                                            <span class="date"><em>작성일</em> 2022.07.01</span>
+                                            <span class="hit"><em>조회수</em> 21</span>
+                                        </div>
+                                        <div class="etc_info">
+                                            <span class="date"><em>출처</em> PLASMA ENVIRONMENTAL SCIENCE&TECHNOLOGY</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>                                 
+                        </ul>
+                    </div>
+                    
+                    <div class="board_pager">
+                        <a href="" class="arr first">처음</a>
+                        <a href="" class="arr prev">이전</a>                                
+                        <span class="group">
+                            <a href="" class="active" title="현재 페이지"><strong>1</strong></a>
+                            <a href="">2</a>
+                            <a href="">3</a>
+                            <a href="">4</a>
+                            <a href="">5</a>
+                            <a href="">6</a>
+                            <a href="">7</a>
+                            <a href="">8</a>
+                            <a href="">9</a>
+                            <a href="">10</a>
+                        </span>                                
+                        <a href="" class="arr next">다음</a>
+                        <a href="" class="arr last">마지막</a>
+                    </div>
+                    <!-- // -->
+                
+                </div>
+            </section>
+            <!--// #content -->
+
+        </div>
+        <!--// #contentWrap -->
+    </section><!-- #container -->
+
+    <footer>
+    </footer>
+</div>
+
+</body>
+
+</html>

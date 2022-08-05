@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+<meta name="title" content="대메뉴1 : 국문">
+<meta name="description" content="국문,대메뉴1">
+<meta name="keyword" content="국문">
+<meta name="author" content="국문">
+<meta property="og:type" content="website">
+<meta property="og:title" content="국문">
+<meta property="og:site_name" content="국문">
+<meta property="og:description" content="국문">
+<title>Table List</title>
+<!-- 공통 CSS -->
+<link rel="stylesheet" href="css/basic.css">
+<!-- 서브 CSS -->
+<link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/board_v3.css">
+<!-- 공통 JS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<!-- 서브 JS -->
+<script src="js/sub.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div class="basicTabWrap">
+        <div class="content_view_tab">
+            <ul class="depth4">
+                <li class="on"><a href="table_list.html">Table List</a></li>          
+                <li><a href="table_view.html">Table View</a></li>
+                <li><a href="table_write.html">Table Write</a></li>
+                <li><a href="gallery_list.html">Gallery List</a></li>          
+                <li><a href="gallery_view.html">Gallery View</a></li>
+                <li><a href="media_list.html">Media List</a></li>  
+                <li><a href="media_view.html">Media View</a></li>
+                <li><a href="wide_list.html">Wide List</a></li>  
+                <li><a href="thumb_list.html">Thumb List</a></li>
+                <li><a href="ebook_list.html">eBook List</a></li>
+                <li><a href="ebook_view.html">eBook View</a></li>
+                <li><a href="pdf_list.html">pdf List</a></li>
+                <li><a href="card_list.html">Card List</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="calendar.html">calendar</a></li>
+<!--                <li><a href="atomic.html">atomic</a></li>-->
+            </ul>
+        </div>
+    </div>
+    <section id="container">
+        <div id="contentWrap">
+            <section id="content">
+                <section class="content_info">
+                    <h1 class="title">Table List</h1>
+                </section>
+
+                <div id="contents_body">
+                    <!-- 컨텐츠 영역 -->
+                    <div class="board_info">
+                        <form name="srhForm" id="srhForm" method="post" action="/board.es?mid=a10201000000&amp;bid=0001">
+                            <fieldset>
+                                <legend class="blind">검색</legend>
+                                <div class="form"> 
+                                    <p class="item">  
+                                        <select name="keyField" id="select" title="검색어 분류를 선택하세요." class="form_select">
+                                            <option value="" selected="selected">전체</option>
+                                            <option value="" >제목</option>
+                                            <option value="" >내용</option>
+                                            <option value="" >작성자</option>
+                                        </select>                                        
+                                    </p>
+                        
+                                    <span class="item type1"><input type="text" name="keyWord" class="form_textbox" placeholder="검색어를 입력하세요" title="검색어를 입력하세요" value=""></span>
+                                    <span class="item type1 btn"><button type="submit" class="Btn-Gray Xs">검색</button></span>
+                                </div>                
+                            </fieldset>
+                        </form>
+                    
+                        <p class="page">
+                            <span class="total">전체 <b>100건</b> </span> <span class="current">현재 페이지 <strong>1</strong>/<b>10</b></span>
+                        </p>
+                    </div>
+                    
+                    <div class="board_list">
+                        <table class="tstyle_list">
+                            <caption>목록 - 번호, 제목, 작성자, 작성일, 조회</caption>
+                            <colgroup>
+                                <col style="width:5%"> 
+                                <col style="width:8%">
+                                <col>
+                                <col style="width:10%">
+                                <col style="width:8%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:12rem;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">분류</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">등록일</th>
+                                    <th scope="col">첨부파일</th>
+                                    <th scope="col">조회수</th>
+                                    <th scope="col">처리상태</th>
+                                    <th scope="col">링크</th>                            
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="m_hidden" aria-label="번호"><i class="icon_notice">공지</i></td>
+                                    <td aria-label="분류">분류2</td>
+                                    <td class="txt_left" aria-label="제목"><a href="">제목이 들어갑니다. <i class="xi-new"><span class="sr_only">새글</span></i></a><span class="comment_num" aria-label="댓글수">10</span></td>
+                                    <td aria-label="등록일">2022.07.01</td>
+                                    <td aria-label="첨부파일"><img src="./img/board/attach.png" alt="첨부파일"></td>
+                                    <td class="m_hidden" aria-label="조회수">226</td>
+                                    <td aria-label="처리상태"><span class="icon" data-label="진행중">진행중</span></td>
+                                    <td aria-label="링크">
+                                        <a href="" class="btn_line" target="_blank">바로가기 <i class="xi-external-link" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="m_hidden" aria-label="번호">8897</td>
+                                    <td aria-label="분류">분류2</td>
+                                    <td class="txt_left" aria-label="제목"> <a href="">제목이 들어갑니다. 아주 긴 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다.<i class="xi-new"><span class="sr_only">새글</span></i></a></td>
+                                    <td aria-label="등록일">2022.07.01</td>
+                                    <td aria-label="첨부파일"><img src="./img/board/pdf.png"  alt="첨부파일 pdf"></td>
+                                    <td class="m_hidden" aria-label="조회수">8000</td>
+                                    <td aria-label="처리상태"><span class="icon" data-label="답변완료">답변완료</span></td>
+                                    <td aria-label="링크">
+                                        <a href="" class="btn_line" target="_blank">바로가기 <i class="xi-external-link" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>             
+                                <tr>
+                                    <td class="m_hidden" aria-label="번호">8896</td>
+                                    <td aria-label="분류">분류1</td>
+                                    <td class="txt_left" aria-label="제목"><a href="" ><i class="xi-lock"><span class="sr_only">비밀글</span></i> 제목이 들어갑니다. <i class="xi-new"><span class="sr_only">새글</span></i></a></td>
+                                    <td aria-label="등록일">2022.07.01</td>
+                                    <td aria-label="첨부파일"><img src="./img/board/hwp.png"  alt="첨부파일 hwp"></td>
+                                    <td class="m_hidden" aria-label="조회수">2</td>
+                                    <td aria-label="처리상태"><span class="icon" data-label="처리완료">처리완료</span></td>
+                                    <td aria-label="링크">
+                                        <a href="" class="btn_line" target="_blank">바로가기 <i class="xi-external-link" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="m_hidden" aria-label="번호">8895</td>
+                                    <td aria-label="분류">분류1</td>
+                                    <td class="txt_left" aria-label="제목"><a href="" ><i class="xi-subdirectory-arrow"><span class="sr_only">답글</span></i>제목이 들어갑니다.</a></td>
+                                    <td aria-label="등록일">2022.07.01</td>
+                                    <td aria-label="첨부파일"><img src="./img/board/hwp.png"  alt="첨부파일 hwp"></td>
+                                    <td class="m_hidden" aria-label="조회수">2</td>
+                                    <td aria-label="처리상태"><span class="icon" data-label="처리완료">처리완료</span></td>
+                                    <td aria-label="링크">
+                                        <a href="" class="btn_line" target="_blank">바로가기 <i class="xi-external-link" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="m_hidden" aria-label="번호">8894</td>
+                                    <td aria-label="분류">분류1</td>
+                                    <td class="txt_left" aria-label="제목"><a href="" ><i class="xi-subdirectory-arrow"><span class="sr_only">답글</span></i> <i class="xi-lock"><span class="sr_only">비밀글</span></i>제목이 들어갑니다.</a></td>
+                                    <td aria-label="등록일">2022.07.01</td>
+                                    <td aria-label="첨부파일"><img src="./img/board/hwp.png"  alt="첨부파일 hwp"></td>
+                                    <td class="m_hidden" aria-label="조회수">2</td>
+                                    <td aria-label="처리상태"><span class="icon" data-label="처리완료">처리완료</span></td>
+                                    <td aria-label="링크"></td>
+                                </tr>
+                                <tr>
+                                    <td class="m_hidden" aria-label="번호">8893</td>
+                                    <td aria-label="분류">분류1</td>
+                                    <td class="txt_left" aria-label="제목"><a href="" >제목이 들어갑니다.</a></td>
+                                    <td aria-label="등록일">2022.07.01</td>
+                                    <td aria-label="첨부파일"><img src="./img/board/hwp.png"  alt="첨부파일 hwp"></td>
+                                    <td class="m_hidden" aria-label="조회수">2</td>
+                                    <td aria-label="처리상태"><span class="icon" data-label="처리완료">처리완료</span></td>
+                                    <td aria-label="링크"></td>
+                                </tr> 
+                                <tr>
+                                    <td class="m_hidden" aria-label="번호">8892</td>
+                                    <td aria-label="분류">분류1</td>
+                                    <td class="txt_left" aria-label="제목"><a href="" >제목이 들어갑니다.</a></td>
+                                    <td aria-label="등록일">2022.07.01</td>
+                                    <td aria-label="첨부파일"><img src="./img/board/hwp.png"  alt="첨부파일 hwp"></td>
+                                    <td class="m_hidden" aria-label="조회수">2</td>
+                                    <td aria-label="처리상태"><span class="icon" data-label="처리완료">처리완료</span></td>
+                                    <td aria-label="링크"></td>
+                                </tr>
+                                <tr>
+                                    <td class="m_hidden" aria-label="번호">8891</td>
+                                    <td aria-label="분류">분류1</td>
+                                    <td class="txt_left" aria-label="제목"><a href="" >제목이 들어갑니다.</a></td>
+                                    <td aria-label="등록일">2022.07.01</td>
+                                    <td aria-label="첨부파일"></td>
+                                    <td class="m_hidden" aria-label="조회수">2</td>
+                                    <td aria-label="처리상태"><span class="icon" data-label="처리완료">처리완료</span></td>
+                                    <td aria-label="링크"></td>
+                                </tr>
+                                <tr>
+                                    <td class="m_hidden" aria-label="번호">8890</td>
+                                    <td aria-label="분류">분류1</td>
+                                    <td class="txt_left" aria-label="제목"><a href="" >제목이 들어갑니다.</a></td>
+                                    <td aria-label="등록일">2022.07.01</td>
+                                    <td aria-label="첨부파일"></td>
+                                    <td class="m_hidden" aria-label="조회수">2</td>
+                                    <td aria-label="처리상태"><span class="icon" data-label="처리완료">처리완료</span></td>
+                                    <td aria-label="링크"></td>
+                                </tr> 
+                                <tr>
+                                    <td class="m_hidden" aria-label="번호">8889</td>
+                                    <td aria-label="분류">분류1</td>
+                                    <td class="txt_left" aria-label="제목"><a href="" >제목이 들어갑니다.</a></td>
+                                    <td aria-label="등록일">2022.07.01</td>
+                                    <td aria-label="첨부파일"></td>
+                                    <td class="m_hidden" aria-label="조회수">2</td>
+                                    <td aria-label="처리상태"><span class="icon" data-label="처리완료">처리완료</span></td>
+                                    <td aria-label="링크"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                                        
+                    <div class="board_pager">
+                        <a href="" class="arr first">처음</a>
+                        <a href="" class="arr prev">이전</a>                                
+                        <span class="group">
+                            <a href="" class="active" title="현재 페이지"><strong>1</strong></a>
+                            <a href="">2</a>
+                            <a href="">3</a>
+                            <a href="">4</a>
+                            <a href="">5</a>
+                            <a href="">6</a>
+                            <a href="">7</a>
+                            <a href="">8</a>
+                            <a href="">9</a>
+                            <a href="">10</a>
+                        </span>                                
+                        <a href="" class="arr next">다음</a>
+                        <a href="" class="arr last">마지막</a>
+                    </div>
+                    <!-- // -->
+                </div>
+            </section>
+            <!--// #content -->
+
+        </div>
+        <!--// #contentWrap -->
+    
+    </section>
+    <!-- #container -->
+
+    <footer>
+    </footer>
+</div>
+
+</body>
+
+</html>

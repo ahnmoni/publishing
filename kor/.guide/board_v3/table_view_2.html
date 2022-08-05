@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+<meta name="title" content="대메뉴1 : 국문">
+<meta name="description" content="국문,대메뉴1">
+<meta name="keyword" content="국문">
+<meta name="author" content="국문">
+<meta property="og:type" content="website">
+<meta property="og:title" content="국문">
+<meta property="og:site_name" content="국문">
+<meta property="og:description" content="국문">
+<title>Table View</title>
+<!-- 공통 CSS -->
+<link rel="stylesheet" href="css/basic.css">
+<!-- 서브 CSS -->
+<link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/board_v3.css">
+<!-- 공통 JS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<!-- 서브 JS -->
+<script src="js/sub.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div class="basicTabWrap">
+        <div class="content_view_tab">
+            <ul class="depth4">
+                <li><a href="table_list.html">Table List</a></li>          
+                <li class="on"><a href="table_view.html">Table View</a></li>
+                <li><a href="table_write.html">Table Write</a></li>
+                <li><a href="gallery_list.html">Gallery List</a></li>          
+                <li><a href="gallery_view.html">Gallery View</a></li>
+                <li><a href="media_list.html">Media List</a></li>  
+                <li><a href="media_view.html">Media View</a></li>                
+                <li><a href="wide_list.html">Wide List</a></li>  
+                <li><a href="thumb_list.html">Thumb List</a></li>
+                <li><a href="ebook_list.html">eBook List</a></li>
+                <li><a href="ebook_view.html">eBook View</a></li>
+                <li><a href="pdf_list.html">pdf List</a></li>
+                <li><a href="card_list.html">Card List</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="calendar.html">calendar</a></li>
+<!--                <li><a href="atomic.html">atomic</a></li>-->
+            </ul>
+        </div>
+    </div>
+    <section id="container">
+        <div id="contentWrap">
+
+            <section id="content">
+                <section class="content_info">
+                    <h1 class="title">Table View</h1>
+                    <div class="more_link_wrap">
+                        <a href="table_view.html">기본</a>
+                        <a href="table_view_2.html" class="on">댓글</a>
+                        <a href="table_view_3.html">답글</a>
+                    </div> 
+                </section>
+
+                <div id="contents_body">
+                    <!-- 컨텐츠 영역 -->
+                    <div class="board_view">
+                        <p class="title">2020년 하계 휴가 기간 안내</p>
+                        <ul class="info">
+                            <li><strong>작성자</strong><span>관리자</span></li>
+                            <li><strong>등록일</strong><span>2020.08.08</span></li>
+                            <li><strong>조회수</strong><span>520</span></li>
+                        </ul>
+                        <div class="contents">
+                            안녕하세요. 담당자입니다. <br><br>당 연구원은 하계 집중휴가 기간을 운영하고 있으며,<br> 이에 따라 7월 31일(월) ~ 8월 4일(금)까지 업무 처리가 지연될 수 있습니다. <br><br> 감사합니다.
+                        </div>
+                        <div class="add_file_wrap">
+                            <p class="title">첨부파일</p>
+                            
+                            <div class="add_file">                                
+                                <div class="item">
+                                    <a href="" class="file_down">
+                                        <img src="./img/board/pdf.png" alt="첨부파일">
+                                        <span class="file_name">첨부파일명.pdf</span>
+                                        <span class="file_size">(6KB)</span>
+                                    </a>
+                                    <span class="link">
+                                        <a href="" class="btn-down">다운로드 <i class="xi-download"></i></a>
+                                        <a href="" class="btn-down">미리보기 <i class="xi-search"></i></a>
+                                    </span>
+                                </div>
+                                <div class="item">
+                                    <a href="" class="file_down">
+                                        <img src="./img/board/pdf.png" alt="첨부파일">
+                                        <span class="file_name">첨부파일명.pdf</span>
+                                        <span class="file_size">(6KB)</span>
+                                    </a>
+                                    <span class="link">
+                                        <a href="" class="btn-down">다운로드 <i class="xi-download"></i></a>
+                                        <a href="" class="btn-down">미리보기 <i class="xi-search"></i></a>
+                                    </span>
+                                </div>                               
+                            </div>
+                        </div>
+                    </div>
+                    <article class="comment">
+                        <div class="form">
+                            <form name="cmtForm" method="post" action="">
+                            <fieldset>
+                                <legend class="blind">등록</legend>
+                                <div class="item">
+                                    <span class="length"><span id="opinionLength">0</span> / 200</span>
+                                    <textarea title="댓글 내용" name="c_comment" rows="4" cols="76" placeholder="댓글을 남겨주세요."></textarea>                                        
+                                    <button type="button" class="btn">등록</button>                                            
+                                </div>
+                            </fieldset>
+                            </form>
+                            
+                        </div>
+                        <div class="add_file">
+                            <div class="item attach">
+                                <button type="button"><i class="xi-upload"></i> 파일 첨부</button>
+                                <span class="txt">hwp,xls,doc,ppt,pdf,zip,jpg,gif,png 파일만 가능합니다. 업로드 용량제한 5MB.</span>
+                            </div>
+                            <div class="item">
+                                <a href="" class="file_down">
+                                    <img src="./img/board/pdf.png" alt="첨부파일">
+                                    <span class="file_name">첨부파일명.pdf</span>
+                                    <span class="file_size">(6KB)</span>
+                                </a>
+                                <a href="" class="btn_del"> [파일삭제]</a>
+                            </div>
+                            <div class="item">
+                                <a href="" class="file_down">
+                                    <img src="./img/board/pdf.png" alt="첨부파일">
+                                    <span class="file_name">첨부파일명.pdf</span>
+                                    <span class="file_size">(6KB)</span>
+                                </a>
+                                <a href="" class="btn_del"> [파일삭제]</a>
+                            </div>
+                        </div>
+                        
+                        <h2 class="title">총 <span>3건</span>의 댓글</h2>
+                                
+                        <div class="list" id="commentListFirst">
+                            <ul>                        
+                                <li id="">
+                                    <span class="name">대외협력실 홍길동</span> <span class="date">2020.06.28</span>               
+                                    <div id="comment_spread_upt_0" class="txt">장학금으로 20,000,000원 사용했습니다.
+                                        
+                                    </div>                                                      
+                                    <p class="btn">                                            
+                                        <a href="">수정</a>
+                                        <a href="">삭제</a> 
+                                        <a href="" >댓글</a>                                             
+                                    </p>  
+                                    
+                                    <div class="add_file_box">
+                                        <div class="add_file">                                
+                                            <div class="item">
+                                                <a href="" class="file_down">
+                                                    <img src="./img/board/pdf.png" alt="첨부파일">
+                                                    <span class="file_name">첨부파일명.pdf</span>
+                                                    <span class="file_size">(6KB)</span>
+                                                </a>
+                                                <span class="link">
+                                                    <a href="" class="btn-down">다운로드 <i class="xi-download"></i></a>
+                                                    <a href="" class="btn-down">미리보기 <i class="xi-search"></i></a>
+                                                </span>
+                                            </div>                                                                          
+                                        </div>
+                                    </div>
+                                </li>                                
+                                <li id="" class="re">
+                                    <span class="name">대외협력실 홍길동</span> <span class="date">2020.06.28</span>               
+                                    <div id="comment_spread_upt_1" class="txt">[수혜자] 이혜민 테크노MBA17학번 원우<br>
+                                    사업개요 : 하바타는 하쿠나마타타의 뜻에서 비롯한 이름으로, 나만의 아바타로 쉽고 즐겁게 건강 관리를 할 수 있게 하는 서비스로 고객의 건강 상태에 맞는 영양성분을 분석하여 맞춤 레시피 등의 식단을 제공함으로써 건강한 식습관을 들이는 것을 시작으로, 각종질활을 관리하고 예방하는 맞춤 건강 관리 서비스로 나아가고자 합니다.
+                                        
+
+                                    </div>  
+                                    <div class="add_file_box">
+                                        <div class="add_file">                                
+                                            <div class="item">
+                                                <a href="" class="file_down">
+                                                    <img src="./img/board/pdf.png" alt="첨부파일">
+                                                    <span class="file_name">첨부파일명.pdf</span>
+                                                    <span class="file_size">(6KB)</span>
+                                                </a>
+                                                <span class="link">
+                                                    <a href="" class="btn-down">다운로드 <i class="xi-download"></i></a>
+                                                    <a href="" class="btn-down">미리보기 <i class="xi-search"></i></a>
+                                                </span>
+                                            </div>
+                                            <div class="item">
+                                                <a href="" class="file_down">
+                                                    <img src="./img/board/pdf.png" alt="첨부파일">
+                                                    <span class="file_name">첨부파일명.pdf</span>
+                                                    <span class="file_size">(6KB)</span>
+                                                </a>
+                                                <span class="link">
+                                                    <a href="" class="btn-down">다운로드 <i class="xi-download"></i></a>
+                                                    <a href="" class="btn-down">미리보기 <i class="xi-search"></i></a>
+                                                </span>
+                                            </div>                               
+                                        </div>
+                                    </div>
+                                    <p class="btn">                                            
+                                        <a href="">수정</a>
+                                        <a href="">삭제</a>  
+                                        <a href="" >댓글</a>                                              
+                                    </p>
+                        
+                                    <div class="form" style="display:none;">
+                                        <form name="cmtForm" method="post" action="">
+                                        <fieldset>
+                                            <legend class="blind">등록</legend>
+                                            <div class="item">
+                                                <span class="length"><span id="">0</span> / 200</span>
+                                                <div class="textarea_wrap">
+                                                    <textarea title="수정 내용" name="c_comment" rows="4" cols="76" >[수혜자] 이혜민 테크노MBA17학번 원우<br>
+                                    사업개요 : 하바타는 하쿠나마타타의 뜻에서 비롯한 이름으로, 나만의 아바타로 쉽고 즐겁게 건강 관리를 할 수 있게 하는 서비스로 고객의 건강 상태에 맞는 영양성분을 분석하여 맞춤 레시피 등의 식단을 제공함으로써 건강한 식습관을 들이는 것을 시작으로, 각종질활을 관리하고 예방하는 맞춤 건강 관리 서비스로 나아가고자 합니다.</textarea>
+                                                </div>                                    
+                                                <button type="button" class="regi_btn">등록</button>   
+                                                <button type="button" class="file_add">파일첨부 </button>
+                                            </div>
+                                        </fieldset>
+                                        </form>
+                                    </div>
+                                                                            
+                                    <div class="form" style="display:none;">
+                                        <form name="cmtForm" method="post" action="">
+                                        <fieldset>
+                                            <legend class="blind">등록</legend>
+                                            <div class="item">
+                                                <span class="length"><span id="">0</span> / 200</span>
+                                                <div class="textarea_wrap">
+                                                    <textarea title="수정 내용" name="c_comment" rows="4" cols="76" placeholder="댓글을 남겨주세요." title="댓글의 답변 내용"></textarea>
+                                                </div>                                    
+                                                <button type="button" class="regi_btn">등록</button>   
+                                                <button type="button" class="file_add">파일첨부 </button>
+                                            </div>
+                                        </fieldset>
+                                        </form>
+                                    </div>                                        
+                                </li>   
+                                <li id="">
+                                    <span class="name">대외협력실 홍길동</span> <span class="date">2020.06.28</span>               
+                                    <div id="comment_spread_upt_0" class="txt">장학금으로 20,000,000원 사용했습니다.
+                                        
+                                    </div>                                                      
+                                    <p class="btn">                                            
+                                        <a href="">수정</a>
+                                        <a href="">삭제</a> 
+                                        <a href="" >댓글</a>                                             
+                                    </p>  
+                                    
+                                    <div class="add_file_box">
+                                        <div class="add_file">                                
+                                            <div class="item">
+                                                <a href="" class="file_down">
+                                                    <img src="./img/board/pdf.png" alt="첨부파일">
+                                                    <span class="file_name">첨부파일명.pdf</span>
+                                                    <span class="file_size">(6KB)</span>
+                                                </a>
+                                                <span class="link">
+                                                    <a href="" class="btn-down">다운로드 <i class="xi-download"></i></a>
+                                                    <a href="" class="btn-down">미리보기 <i class="xi-search"></i></a>
+                                                </span>
+                                            </div>                                                                          
+                                        </div>
+                                    </div>
+
+                                    <!-- 수정 버튼 클릭시 보여짐 -->
+                                    <div class="form" style="display:block;">
+                                        <form name="cmtForm" method="post" action="">
+                                        <fieldset>
+                                            <legend class="blind">등록</legend>
+                                            <div class="item">
+                                                <span class="length"><span id="">0</span> / 200</span>
+                                                <div class="textarea_wrap">
+                                                    <textarea title="수정 내용" name="c_comment" rows="4" cols="76" >장학금으로 20,000,000원 사용했습니다.  
+                                                        *수정버튼 클릭시 보여집니다. *수정버튼 클릭시 보여집니다.
+                                                    </textarea></textarea>
+                                                </div>                                    
+                                                <button type="button" class="regi_btn">등록</button>   
+                                            </div>
+                                        </fieldset>
+                                        </form>
+                                    </div>
+
+                                    <div class="add_file">
+                                        <div class="item attach">
+                                            <button type="button"><i class="xi-upload"></i> 파일 첨부</button>
+                                            <span class="txt">hwp,xls,doc,ppt,pdf,zip,jpg,gif,png 파일만 가능합니다. 업로드 용량제한 5MB.</span>
+                                        </div>                                                                               
+                                    </div>
+                                            
+                                    <!-- 댓글 버튼 클릭시 보여짐 -->
+                                    <div class="form" style="display:block;">
+                                        <form name="cmtForm" method="post" action="">
+                                        <fieldset>
+                                            <legend class="blind">등록</legend>
+                                            <div class="item">
+                                                <span class="length"><span id="">0</span> / 200</span>
+                                                <div class="textarea_wrap">
+                                                    <textarea title="댓글 내용" name="c_comment" rows="4" cols="76" placeholder="댓글을 남겨주세요." title="댓글의 답변 내용"> *댓글 버튼 클릭시 보여집니다.</textarea>
+                                                </div>                                    
+                                                <button type="button" class="regi_btn">등록</button>   
+                                            </div>
+                                        </fieldset>
+                                        </form>
+                                    </div>
+                                </li>  
+                                <li id="" class="re" style="padding-left: 4rem;">
+                                    <span class="name">대외협력실 홍길동</span> <span class="date">2020.06.28</span>               
+                                    <div id="comment_spread_upt_2" class="txt">확인했습니다.                                        
+                                    </div>  
+                                    <p class="btn">                                            
+                                        <a href="">수정</a>
+                                        <a href="">삭제</a>  
+                                        <a href="" >댓글</a>                                              
+                                    </p>                                       
+                                </li> 
+                                <li id="" class="re" style="padding-left: 8rem;">
+                                    <span class="name">대외협력실 홍길동</span> <span class="date">2020.06.28</span>               
+                                    <div id="comment_spread_upt_3" class="txt">[수혜자] 이혜민 테크노MBA17학번 원우<br>
+                                    사업개요 : 하바타는 하쿠나마타타의 뜻에서 비롯한 이름으로, 나만의 아바타로 쉽고 즐겁게 건강 관리를 할 수 있게 하는 서비스로 고객의 건강 상태에 맞는 영양성분을 분석하여 맞춤 레시피 등의 식단을 제공함으로써 건강한 식습관을 들이는 것을 시작으로, 각종질활을 관리하고 예방하는 맞춤 건강 관리 서비스로 나아가고자 합니다.                                        
+                                    </div>  
+                                    <p class="btn">                                            
+                                        <a href="">수정</a>
+                                        <a href="">삭제</a>  
+                                        <a href="" >댓글</a>                                              
+                                    </p>                     
+                                </li>   
+                                <li id="">
+                                    <span class="name">대외협력실 홍길동</span> <span class="date">2020.06.28</span>               
+                                    <div id="comment_spread_upt_4" class="txt">장학금으로 20,000,000원 사용했습니다.                                        
+                                    </div>                                                      
+                                    <p class="btn">                                            
+                                        <a href="">수정</a>
+                                        <a href="">삭제</a> 
+                                        <a href="" >댓글</a>                                             
+                                    </p>                                        
+                                </li>                              
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <div class="board_btns">
+                        <button type="button" class="btn type1">삭제</button>
+                        <button type="button" class="btn type1">수정</button>
+                        <button type="button" class="btn ">목록</button>  
+                    </div>
+
+                    <ul class="prevnext">
+                        <li class="prev"><span>이전글</span><a href="">이전글 제목입니다.</a></li>          
+                        <li class="next"><span>다음글</span><a href="">다음글 제목입니다.</a></li>          
+                    </ul>
+                    <!-- // -->                    
+                </div>
+            
+            </section>
+            <!--// #content -->
+
+        </div>
+        <!--// #contentWrap -->
+    
+    </section>
+    <!-- #container -->
+
+</div>
+</body>
+</html>
