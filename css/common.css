@@ -352,3 +352,32 @@ Create date : 2020-03-02
     .contents_info #satisfy .form .btn { position: static; height: 4rem; vertical-align: top; }
     .contents_info #satisfy .form .length { top: auto; bottom: 0; text-align: right; line-height: 4rem; } 
 }
+
+
+
+@media print { 
+    body { -webkit-transform: scale(0.9); transform: scale(0.9); }
+    #contents { min-width: inherit; }
+    #content, .content_footer { width: 100%; }
+
+    #header, 
+    #visual, 
+    #snb,
+    .contents_util .location, 
+    .contents_util .util,
+    .contents_info,
+    #footer, 
+    #quick { display: none; }
+
+    
+    .table_wrap.responsive { overflow: hidden; overflow-x: hidden; }
+    .table_wrap.responsive table { min-width: calc(100% + 1px); }
+    .table_wrap.responsive table tbody tr th, .table_wrap.responsive table tbody tr td { padding: 0.8rem .75rem; }
+    .table_wrap { display: block; page-break-inside: avoid; page-break-after: auto; }
+    .horizontal_scroll { display: none; }
+
+    @page {size: 210mm 297mm;
+        /*A4*/
+        margin: 4mm 0mm;
+        padding: 20mm 0; } 
+}

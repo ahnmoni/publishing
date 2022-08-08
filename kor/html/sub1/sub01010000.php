@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="../../css/sub_respond.css" />
 
 <script type="text/javascript" src="/jquery/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="/js/global.js"></script>
 <script type="text/javascript" src="/jquery/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="../../js/layout.js"></script>
 <script type="text/javascript" src="../../js/sub.js"></script>
@@ -135,8 +136,8 @@
                     
                     <div class="util">
                         <span class="zoom">
-                            <a href="#none"  class="btn up" id="up">글자 크게</a>
-                            <a href="#none"  class="btn down" id="down">글자 작게</a>
+                            <a href="#contents_body" onclick="zoomInOut('plus'); return false;" class="btn up">글자 크게</a>
+                            <a href="#contents_body" onclick="zoomInOut('minus'); return false;" class="btn down">글자 작게</a>
                         </span>
                         
                         <article class="share">

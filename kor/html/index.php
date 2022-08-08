@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="../css/layout_respond.css" /> 
 <link rel="stylesheet" type="text/css" href="../css/main.css" />
 <link rel="stylesheet" type="text/css" href="../css/main_respond.css" />
+<link rel="stylesheet" type="text/css" href="../css/default.css" />
 
 <script type="text/javascript" src="../../jquery/jquery-2.2.4.min.js"></script>
 <script type="text/javascript" src="../../jquery/slick.js"></script>

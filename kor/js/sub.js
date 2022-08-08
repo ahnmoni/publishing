@@ -77,6 +77,10 @@ $(function()
     // 공유하기
     $('.share').classtoggle();
 
+    $('.print').on("click", function () {
+        $('#contents').printThis();
+    });
+
 
     // 사회적약자 배려 폰트크기 조절
 	function getSize() {
