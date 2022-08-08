@@ -158,7 +158,7 @@
                     </div>
                 </li>
                 <li class="lnb6 ">
-                    <a href="/menu.es?mid=a10600000000">테스트</a>
+                    <a href="/menu.es?mid=a10600000000" target="_blank" title="새창 열림">외부링크</a>
                 </li>
             </ul>
         </nav>

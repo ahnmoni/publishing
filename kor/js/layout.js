@@ -81,7 +81,7 @@ $.fn.gnb1 = function( options ){
     var settings = $.extend
     ({
         'actionType'        : 'mouseenter focusin',     // 메뉴가 동작하는 액션 (mouseenter focusin, click)
-        'target'            : '#header',                // 활성화 시 클래스가 추가되는 요소 (공란일 경우 오버되는 a 링크 부모 li에만 클래스 추가됨)        
+        'target'            : '#gnb1, #header',         // 활성화 시 클래스가 추가되는 요소 (공란일 경우 오버되는 a 링크 부모 li에만 클래스 추가됨)        
         'class'             : 'active',                 // 추가할 클래스명 (target에 추가됨)
         'depth2'            : '.depth2',               // 서브메뉴
         'closeBtn'          : '.close'                  // 닫기 버튼이 별도로 존재하는 경우 (닫기 버튼은 클릭시에만)

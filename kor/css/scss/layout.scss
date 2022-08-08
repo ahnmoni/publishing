@@ -128,7 +128,62 @@ Create date : 2020-02-14
 }
 
 // 메뉴1
-#gnb1 > ul{
+// 1. 가로네비 서브별 드롭다운 세로형
+/*#gnb1 > ul{
+    float: right; width: calc(100% - 36rem); margin: 4rem 18rem 0 0; text-align: center; font-size: 0;
+    & > li {
+        display: inline-block; padding: 3.5rem 5rem; position: relative;
+        & > a {font-size: 2rem; line-height: 3rem; display: inline-block;}
+        &.active .depth2 {@include visible;}
+    }
+    .depth2{
+        @include hidden; 
+        display: block !important; position: absolute; left: 50%; transform: translateX(-50%); top: 100%; z-index: 1; width: 100% !important; min-width: 20rem;
+        .desc{display: none;}
+        & > ul {
+            background-color: #fff; padding: 2rem 0;
+            & > li {
+                & > a {font-size: 1.7rem; line-height: 2.2rem; display: inline-block; padding: 1rem;}
+            }
+        }
+    }
+    .depth3{display: none;}
+    a{
+        &:hover,
+        &:focus{text-decoration: underline;}
+    }
+}*/
+
+// 2. 가로네비 서브별 드롭다운 가로형
+/*#gnb1 > ul{
+    float: right; width: calc(100% - 36rem); margin: 4rem 18rem 0 0; text-align: center; font-size: 0; position: relative;
+    & > li {
+        display: inline-block; padding: 3.5rem 5rem; 
+        & > a {font-size: 2rem; line-height: 3rem; display: inline-block;}
+        &.active .depth2 {@include visible;}
+    }
+    .depth2{
+        @include hidden; 
+        display: block !important; position: absolute; left: 50%; transform: translateX(-50%); top: 100%; z-index: 1; width: 100% !important; min-width: 20rem;
+        .desc{display: none;}
+        & > ul {
+            padding: 1rem 0;
+            &::before {@include bg2(type1); box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); border-top: 1px solid #eee; background-color: #fff;}
+            & > li {
+                display: inline-block;
+                & > a {font-size: 1.7rem; line-height: 2.2rem; display: inline-block; padding: 1rem;}
+            }
+        }
+    }
+    .depth3{display: none;}
+    a{
+        &:hover,
+        &:focus{text-decoration: underline;}
+    }
+}*/
+
+// 3. 가로네비 서브별 드롭다운 전체창
+/*#gnb1 > ul{
     float: right; width: calc(100% - 36rem); margin: 7.5rem 18rem 0 0; text-align: center;
 
     & > li {
@@ -180,6 +235,46 @@ Create date : 2020-02-14
         }
     }
 }
+*/
+
+// 4. 가로네비 서브 전체 드롭다운 전체창
+#gnb1 {
+    & > ul{
+        float: right; width: calc(100% - 36rem); margin: 4rem 18rem 0 0; text-align: center; font-size: 0; position: relative;
+        & > li {
+            display: inline-block; padding: 3.5rem 5rem; position: relative;
+            & > a {font-size: 2rem; line-height: 3rem; display: inline-block;}
+            //&.active .depth2 {@include visible;}
+        }
+        
+        .depth2{
+            @include hidden; 
+            display: block !important; position: absolute; left: 50%; transform: translateX(-50%); top: 100%; z-index: 1; width: 100% !important; 
+            .desc{display: none;}
+            & > ul {
+                 padding: 2rem 0;
+                & > li {
+                    & > a {font-size: 1.7rem; line-height: 2.2rem; display: inline-block; padding: 1rem;}
+                }
+            }
+        }
+        .depth3{display: none;}
+        a{
+            &:hover,
+            &:focus{text-decoration: underline;}
+        }
+    }
+    &.active{
+        position: relative;
+        &::after {@include bg2(type1); box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); border-top: 1px solid #eee; background-color: #fff; top: 14rem; height: 50rem;}
+        & > ul{
+            & > li{
+                .depth2{@include visible}
+            }
+        }
+    }
+}
+
 
 // 메뉴2 (모바일)
 #gnb2{

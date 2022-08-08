@@ -8,7 +8,7 @@ Create date : 2020-02-14
 
 #visual .visual_list .item { position: relative; height: 70.5rem; overflow: hidden; }
 
-#visual .visual_list .item .txt_box { width: 150rem; max-width: calc(100% - 2rem); margin-left: auto !important; margin-right: auto !important; color: #fff; position: absolute; top: 23.5rem; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); padding-right: 36rem; z-index: 1; }
+#visual .visual_list .item .txt_box { width: 150rem; max-width: calc(100% - 4rem); margin-left: auto !important; margin-right: auto !important; color: #fff; position: absolute; top: 23.5rem; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); padding-right: 36rem; z-index: 1; }
 
 #visual .visual_list .item .txt_box .title { font-size: 7rem; line-height: 1.38; font-weight: 300; margin-bottom: 1.5rem; }
 
@@ -22,7 +22,7 @@ Create date : 2020-02-14
 
 #visual .visual_list .slick-slide.slick-active .img_box img { -webkit-transform: scale(1) translateX(-50%); transform: scale(1) translateX(-50%); -webkit-transition: -webkit-transform 5s ease-in .5s; transition: -webkit-transform 5s ease-in .5s; transition: transform 5s ease-in .5s; transition: transform 5s ease-in .5s, -webkit-transform 5s ease-in .5s; }
 
-#visual .slider_control { width: 150rem; max-width: calc(100% - 2rem); margin-left: auto !important; margin-right: auto !important; position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); top: 16.4rem; }
+#visual .slider_control { width: 150rem; max-width: calc(100% - 4rem); margin-left: auto !important; margin-right: auto !important; position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); top: 16.4rem; }
 
 #visual .slider_control .inner { display: inline-block; padding: 0 6rem 0 3rem; position: relative; }
 
@@ -98,7 +98,7 @@ Create date : 2020-02-14
 @keyframes circleLeft { 0%, 50% { -webkit-transform: rotate(-135deg); transform: rotate(-135deg); }
   100% { -webkit-transform: rotate(45deg); } }
 
-#contents { width: 150rem; max-width: calc(100% - 2rem); margin-left: auto !important; margin-right: auto !important; margin: 9rem 0 0; }
+#contents { width: 150rem; max-width: calc(100% - 4rem); margin-left: auto !important; margin-right: auto !important; margin: 9rem 0 0; }
 
 #contents .more { font-size: 1.5rem; position: absolute; right: 2rem; top: 0; font-weight: 500; line-height: 5.5rem; }
 

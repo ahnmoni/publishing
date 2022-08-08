@@ -6,7 +6,7 @@ Create date : 2020-02-14
 -------------------------------------------------*/
 #wrap { outline: 0; }
 
-#header { width: 150rem; max-width: calc(100% - 2rem); margin-left: auto !important; margin-right: auto !important; position: relative; z-index: 5; }
+#header { width: 150rem; max-width: calc(100% - 4rem); margin-left: auto !important; margin-right: auto !important; position: relative; z-index: 5; }
 
 #header::after { display: block; clear: both; width: 100%; height: 0; content: ''; }
 
@@ -18,7 +18,7 @@ Create date : 2020-02-14
 
 #header .search .group::before { position: absolute; left: 50%; top: 0; z-index: -1; width: 1000%; height: 100%; margin-left: -500%; content: ''; border-top: 1px solid #ddd; background-color: #fff; }
 
-#header .search .form { width: 50rem; max-width: calc(100% - 2rem); margin-left: auto !important; margin-right: auto !important; position: relative; margin: 5rem 0; padding-left: 6rem; color: #000; line-height: 6rem; }
+#header .search .form { width: 50rem; max-width: calc(100% - 4rem); margin-left: auto !important; margin-right: auto !important; position: relative; margin: 5rem 0; padding-left: 6rem; color: #000; line-height: 6rem; }
 
 #header .search .form label { font-size: 2rem; position: absolute; left: 0; top: 0; font-weight: 500; }
 
@@ -78,39 +78,132 @@ Create date : 2020-02-14
 
 #logo a { display: block; }
 
-#gnb1 > ul { float: right; width: calc(100% - 36rem); margin: 7.5rem 18rem 0 0; text-align: center; }
+/*#gnb1 > ul{
+    float: right; width: calc(100% - 36rem); margin: 4rem 18rem 0 0; text-align: center; font-size: 0;
+    & > li {
+        display: inline-block; padding: 3.5rem 5rem; position: relative;
+        & > a {font-size: 2rem; line-height: 3rem; display: inline-block;}
+        &.active .depth2 {@include visible;}
+    }
+    .depth2{
+        @include hidden; 
+        display: block !important; position: absolute; left: 50%; transform: translateX(-50%); top: 100%; z-index: 1; width: 100% !important; min-width: 20rem;
+        .desc{display: none;}
+        & > ul {
+            background-color: #fff; padding: 2rem 0;
+            & > li {
+                & > a {font-size: 1.7rem; line-height: 2.2rem; display: inline-block; padding: 1rem;}
+            }
+        }
+    }
+    .depth3{display: none;}
+    a{
+        &:hover,
+        &:focus{text-decoration: underline;}
+    }
+}*/
+/*#gnb1 > ul{
+    float: right; width: calc(100% - 36rem); margin: 4rem 18rem 0 0; text-align: center; font-size: 0; position: relative;
+    & > li {
+        display: inline-block; padding: 3.5rem 5rem; 
+        & > a {font-size: 2rem; line-height: 3rem; display: inline-block;}
+        &.active .depth2 {@include visible;}
+    }
+    .depth2{
+        @include hidden; 
+        display: block !important; position: absolute; left: 50%; transform: translateX(-50%); top: 100%; z-index: 1; width: 100% !important; min-width: 20rem;
+        .desc{display: none;}
+        & > ul {
+            padding: 1rem 0;
+            &::before {@include bg2(type1); box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); border-top: 1px solid #eee; background-color: #fff;}
+            & > li {
+                display: inline-block;
+                & > a {font-size: 1.7rem; line-height: 2.2rem; display: inline-block; padding: 1rem;}
+            }
+        }
+    }
+    .depth3{display: none;}
+    a{
+        &:hover,
+        &:focus{text-decoration: underline;}
+    }
+}*/
+/*#gnb1 > ul{
+    float: right; width: calc(100% - 36rem); margin: 7.5rem 18rem 0 0; text-align: center;
 
-#gnb1 > ul > li { display: inline-block; margin: 0 5rem; padding-bottom: 3rem; }
+    & > li {
+        display: inline-block; margin: 0 5rem; padding-bottom: 3rem;
 
-#gnb1 > ul > li > a { font-size: 2rem; font-weight: 600; }
+        & > a {@include fs(20); font-weight: 600;}
 
-#gnb1 > ul > li.active .depth2 { visibility: visible; overflow: visible; width: auto; height: auto; opacity: 1; }
+        &.active .depth2 {@include visible;}
 
-#gnb1 > ul > li.lnb1 .depth2 > ul { display: table; width: calc(100% + 0px); table-layout: fixed; width: 80%; padding: 0; }
+        &.lnb1 .depth2 {
+            & > ul {
+                @include table(0px, top); 
+                width: 80%; padding: 0;
+    
+                & > li {
+                    padding: 2.5rem; border-right: 1px solid #eee;
+    
+                    & > a {@include fs(18); padding: 0; border: 0 none; background: none; font-weight: 400; color: #3a53a7; text-align: left;}
+                }
+            }
+        }
 
-#gnb1 > ul > li.lnb1 .depth2 > ul > * { display: table-cell; padding-right: 0px; vertical-align: top; }
+        &:nth-child(n + 2) .depth2 > ul > li {
+            float: left; width: 25%; padding: 1rem;
 
-#gnb1 > ul > li.lnb1 .depth2 > ul > li { padding: 2.5rem; border-right: 1px solid #eee; }
+            & > a {display: block; padding: 1rem; border: 1px solid #efefef; background: #f8f8f8; text-align: center;}
+        }
+    }
 
-#gnb1 > ul > li.lnb1 .depth2 > ul > li > a { font-size: 1.8rem; padding: 0; border: 0 none; background: none; font-weight: 400; color: #3a53a7; text-align: left; }
+    .depth2{
+        @include hidden; 
+        display: block !important; position: absolute; left: 0; top: 100%; z-index: 1; width: 100% !important;
 
-#gnb1 > ul > li:nth-child(n + 2) .depth2 > ul > li { float: left; width: 25%; padding: 1rem; }
+        &::before {@include bg2(type1); box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); border-top: 1px solid #eee; background-color: #fff;}
+        &::after {position: absolute; left: 0; top: 0; width: 1px; height: 100%; background-color: #eee; content: '';}
 
-#gnb1 > ul > li:nth-child(n + 2) .depth2 > ul > li > a { display: block; padding: 1rem; border: 1px solid #efefef; background: #f8f8f8; text-align: center; }
+        .desc{
+            @include fs(17); 
+            float: left; width: 20%; text-align: center;
 
-#gnb1 > ul .depth2 { visibility: hidden; overflow: hidden; width: 0; height: 0; opacity: 0; display: block !important; position: absolute; left: 0; top: 100%; z-index: 1; width: 100% !important; }
+            .title {@include fs(30); display: block; padding: 5rem 0 1.8rem; color: #333;}
 
-#gnb1 > ul .depth2::before { position: absolute; left: 50%; top: 0; z-index: -1; width: 1000%; height: 100%; margin-left: -500%; content: ''; -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); border-top: 1px solid #eee; background-color: #fff; }
+            &::after {display: block; width: 10rem; height: 10rem; margin: 6rem auto 0; background: url('../img/layout/depth2.png') no-repeat center center; background-size: 100%; content: '';}
+        }
 
-#gnb1 > ul .depth2::after { position: absolute; left: 0; top: 0; width: 1px; height: 100%; background-color: #eee; content: ''; }
+        & > ul {
+            @include fslh(16, 28);
+            float: right; width: 80%; height: 40rem; padding: 1.5rem; border-left: 1px solid #eee; text-align: left;
+        }
+    }
+}
+*/
+#gnb1 > ul { float: right; width: calc(100% - 36rem); margin: 4rem 18rem 0 0; text-align: center; font-size: 0; position: relative; }
 
-#gnb1 > ul .depth2 .desc { font-size: 1.7rem; float: left; width: 20%; text-align: center; }
+#gnb1 > ul > li { display: inline-block; padding: 3.5rem 5rem; position: relative; }
 
-#gnb1 > ul .depth2 .desc .title { font-size: 3rem; display: block; padding: 5rem 0 1.8rem; color: #333; }
+#gnb1 > ul > li > a { font-size: 2rem; line-height: 3rem; display: inline-block; }
 
-#gnb1 > ul .depth2 .desc::after { display: block; width: 10rem; height: 10rem; margin: 6rem auto 0; background: url("../img/layout/depth2.png") no-repeat center center; background-size: 100%; content: ''; }
+#gnb1 > ul .depth2 { visibility: hidden; overflow: hidden; width: 0; height: 0; opacity: 0; display: block !important; position: absolute; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); top: 100%; z-index: 1; width: 100% !important; }
 
-#gnb1 > ul .depth2 > ul { font-size: 1.6rem; line-height: 1.75; float: right; width: 80%; height: 40rem; padding: 1.5rem; border-left: 1px solid #eee; text-align: left; }
+#gnb1 > ul .depth2 .desc { display: none; }
+
+#gnb1 > ul .depth2 > ul { padding: 2rem 0; }
+
+#gnb1 > ul .depth2 > ul > li > a { font-size: 1.7rem; line-height: 2.2rem; display: inline-block; padding: 1rem; }
+
+#gnb1 > ul .depth3 { display: none; }
+
+#gnb1 > ul a:hover, #gnb1 > ul a:focus { text-decoration: underline; }
+
+#gnb1.active { position: relative; }
+
+#gnb1.active::after { position: absolute; left: 50%; top: 0; z-index: -1; width: 1000%; height: 100%; margin-left: -500%; content: ''; -webkit-box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); border-top: 1px solid #eee; background-color: #fff; top: 14rem; height: 50rem; }
+
+#gnb1.active > ul > li .depth2 { visibility: visible; overflow: visible; width: auto; height: auto; opacity: 1; }
 
 #gnb2 .control { font-size: 3rem; overflow: hidden; position: absolute; right: 0; bottom: 3.5rem; z-index: 3; width: 3rem; height: 3rem; color: #333; text-align: center; line-height: 3rem; }
 
@@ -176,7 +269,7 @@ Create date : 2020-02-14
 
 #quick.active::before { width: 1000%; opacity: 1; }
 
-#footer { position: relative; z-index: 0; width: 150rem; max-width: calc(100% - 2rem); margin-left: auto !important; margin-right: auto !important; padding: 4rem 0 7rem; color: #9fa4ad; }
+#footer { position: relative; z-index: 0; width: 150rem; max-width: calc(100% - 4rem); margin-left: auto !important; margin-right: auto !important; padding: 4rem 0 7rem; color: #9fa4ad; }
 
 #footer::before { position: absolute; left: 50%; top: 0; z-index: -1; width: 1000%; height: 100%; margin-left: -500%; content: ''; background-color: #313640; }
 
@@ -226,7 +319,7 @@ Create date : 2020-02-14
 
 #fnb .fnb2 a:hover::before, #fnb .fnb2 a:focus::before { -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
-#fnb .fnb2 .blog a::before { padding: 0 0.5rem; font-family: "Noto Sans KR"; font-weight: 800; content: 'b b'; }
+#fnb .fnb2 .blog a::before { padding: 0 0.5rem; font-family: "Pretendard"; font-weight: 800; content: 'b b'; }
 
 #fnb .fnb2 .facebook a::before { content: ' '; }
 

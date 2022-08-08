@@ -72,7 +72,31 @@ $(function()
     ({
         'button'        : 'button'   // 이벤트 받을 타겟 선택
     });
+    
 
     // 공유하기
     $('.share').classtoggle();
+
+
+    // 사회적약자 배려 폰트크기 조절
+	function getSize() {
+        size = $( "html" ).css( "font-size" );
+        size = parseInt(size, 20);
+      }
+    //get inital font size
+    getSize();
+    $( "#up" ).on( "click", function() {
+        // parse font size, if less than 50 increase font size
+        if ((size + 2) <= 50) {
+            $( "html" ).css( "font-size", "+=2" );
+        }
+    });
+    $( "#down" ).on( "click", function() {
+        if ((size - 2) >= 12) {
+            $( "html" ).css( "font-size", "-=2" );
+        }
+    });
+
+
+    
 });

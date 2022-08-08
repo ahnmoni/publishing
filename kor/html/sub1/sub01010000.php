@@ -30,6 +30,7 @@
             <div id="visual" class="visual1">
                 <strong class="title">탭2차-1</strong>
                 <p class="control">
+                    <a href="/kor/html/sub1/sub01020000.php" class="prev"><span>탭2차-2</span></a>
                     <a href="/kor/html/sub1/sub01020000.php" class="next"><span>탭2차-2</span></a>
                 </p>
                 <span class="img"><img src="../../img/sub/sub.jpg" alt=""></span>
@@ -134,8 +135,8 @@
                     
                     <div class="util">
                         <span class="zoom">
-                            <a href="#contents_body" onclick="zoomInOut('plus'); return false;" class="btn up">글자 크게</a>
-                            <a href="#contents_body" onclick="zoomInOut('minus'); return false;" class="btn down">글자 작게</a>
+                            <a href="#none"  class="btn up" id="up">글자 크게</a>
+                            <a href="#none"  class="btn down" id="down">글자 작게</a>
                         </span>
                         
                         <article class="share">
